@@ -1,0 +1,14 @@
+---
+title: "R for Data Science workshop"
+subtitle: "Introduction"
+date: "5/1/2019"
+output: beamer_presentation
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding, output_dir = file.path(dirname(inputFile), "..", "slides")) })
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Introduction
