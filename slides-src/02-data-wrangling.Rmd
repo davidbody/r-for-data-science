@@ -1,14 +1,21 @@
 ---
-title: "R for Data Science shop"
-subtitle: "Data wrangling with dplyr and tidyr"
-date: "5/1/2019"
-output: beamer_presentation
-knit: (function(inputFile, encoding) {
-  rmarkdown::render(inputFile, encoding = encoding, output_dir = file.path(dirname(inputFile), "..", "slides")) })
+title: "Data wrangling with dplyr and tidyr"
+author: "David W. Body"
+date: "2019-05-01 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    css: [default, default-fonts, styles.css]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      titleSlideClass: [middle, center]
 ---
+class:left
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+options(htmltools.dir.version = FALSE)
 ```
 
 ## Data wrangling with dplyr and tidyr
