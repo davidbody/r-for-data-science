@@ -1,3 +1,17 @@
+.demo {
+  align-items: center;
+  color: blue;
+  display: flex;
+  font-family: sans-serif;
+  font-size: 40pt;
+  justify-content: center;
+}
+
+.highlight {
+  color: blue;
+  font-weight: bold;
+}
+
 .exercise {
   color: blue;
   font-size: 24px;
