@@ -19,3 +19,222 @@ options(htmltools.dir.version = FALSE)
 ```
 
 ## Data Visualization with ggplot2
+
+### Outline
+
+- Prerequisites
+  - Tidyverse
+  - Data frames
+
+- Overview of ggplot2
+
+- Grammar of Graphics
+
+- Exploratory vs Expository Plots
+
+---
+class: center
+
+# Data science workflow
+
+![Data science workflow](assets/data-science.png)
+
+<br/>
+<br/>
+<br/>
+<br/>
+<p style="font-size: x-small">
+Image source: <a href="http://r4ds.had.co.nz/">R for Data Science</a> by Hadley Wickham & Garrett Grolemund.
+</p>
+
+---
+class: center
+
+# Data science workflow
+
+![Data science workflow](assets/data-science-explore.png)
+
+<br/>
+<br/>
+<br/>
+<br/>
+<p style="font-size: x-small">
+Image source: <a href="http://r4ds.had.co.nz/">R for Data Science</a> by Hadley Wickham & Garrett Grolemund.
+</p>
+
+---
+class: left
+
+# ggplot2
+
+From the official ggplot2 website:
+
+> [ggplot2](http://ggplot2.tidyverse.org/) is a system for declaratively creating graphics, based on [**The Grammar of Graphics**](http://amzn.to/2ef1eWp). You provide the .red[data], tell ggplot2 how to map variables to .red[aesthetics], what .red[graphical primitives] to use, and it takes care of the details.
+
+--
+
+- R package
+
+--
+
+- Developed by Hadley Wickham (PhD, Iowa State, 2008)
+
+--
+
+- Now part of the tidyverse
+
+--
+
+- Other R graphics systems: base, lattice, grid
+
+--
+
+- Extensible
+
+--
+
+- Worth the learning curve
+
+---
+class: left
+
+# Prerequisites
+
+### Tidyverse
+
+* Opinionated collection of R packages
+* Share underlying design philosophy, grammar, and data structures
+
+### Data frames
+
+* Rectangular data structure
+* Columns represent variables
+* Rows represent observations
+* Tidyverse data frames are called "tibbles"
+
+**Tidyverse packages work with tidy tibbles**
+
+--
+.demo[Demo]
+
+---
+class: left
+
+# Grammar of Graphics
+
+--
+
+- .highlight[Data] (data frame in tidy format)
+
+--
+
+- Layers of .highlight[geom]etric objects and .highlight[stat]istical transformations
+
+--
+
+- .highlight[Scale]s that map data values to (and from) .highlight[aes]thetic space values (location, color, size, etc.)
+
+--
+
+- .highlight[Coord]inate system (Cartesion, map projections, polar)
+
+--
+
+- .highlight[Facet]ing (breaking data into subsets)
+
+--
+
+- .highlight[Theme]s
+
+--
+
+.demo[Demo]
+
+---
+class: left
+
+# ggplot2 template
+
+```{r, eval=FALSE}
+ggplot(data = <DATA>) + 
+  <GEOM_FUNCTION>(mapping = aes(<MAPPINGS>))
+```
+
+--
+
+More commonly
+
+```{r, eval=FALSE}
+ggplot(data = <DATA>, mapping = aes(<MAPPINGS>)) + 
+  <GEOM_FUNCTION>()
+```
+
+--
+
+.demo[Demo]
+
+---
+class: left
+
+# Full ggplot2 template
+
+```{r, eval=FALSE}
+ggplot(data = <DATA>) + 
+  <GEOM_FUNCTION>(
+     mapping = aes(<MAPPINGS>),
+     stat = <STAT>, 
+     position = <POSITION>
+  ) +
+  <COORDINATE_FUNCTION> +
+  <FACET_FUNCTION>
+```
+
+--
+
+More commonly
+
+```{r, eval=FALSE}
+ggplot(data = <DATA>, mapping = aes(<MAPPINGS>)) + 
+  <GEOM_FUNCTION>(
+     stat = <STAT>, 
+     position = <POSITION>
+  ) +
+  <COORDINATE_FUNCTION> +
+  <FACET_FUNCTION>
+```
+
+---
+class: left
+
+# Five named graphs
+
+Name | Geom
+---- | ----
+Scatterplot | geom_point()
+Linegraph | geom_line()
+Histogram | geom_histogram()
+Boxplot | geom_boxplot()
+Barplot | geom_barplot()
+
+--
+
+.demo[Demo]
+
+---
+class: left
+
+# Other things
+
+- Exploratory vs expository plots
+- Importance of exploratory data visualization
+
+.demo[Demo]
+
+---
+class: middle, center
+
+# Your turn
+
+### ggplot2
+
+.exercise[exercises/01-data-visualization-with-ggplot2.Rmd]

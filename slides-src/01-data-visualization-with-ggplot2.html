@@ -14,7 +14,7 @@ class: middle, center, title-slide
 
 # Data Visualization with ggplot2
 ### David W. Body
-### 2019-05-01 (updated: 2019-05-02)
+### 2019-05-01 (updated: 2019-05-04)
 
 ---
 
@@ -23,6 +23,229 @@ class:left
 
 
 ## Data Visualization with ggplot2
+
+### Outline
+
+- Prerequisites
+  - Tidyverse
+  - Data frames
+
+- Overview of ggplot2
+
+- Grammar of Graphics
+
+- Exploratory vs Expository Plots
+
+---
+class: center
+
+# Data science workflow
+
+![Data science workflow](assets/data-science.png)
+
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;p style="font-size: x-small"&gt;
+Image source: &lt;a href="http://r4ds.had.co.nz/"&gt;R for Data Science&lt;/a&gt; by Hadley Wickham &amp; Garrett Grolemund.
+&lt;/p&gt;
+
+---
+class: center
+
+# Data science workflow
+
+![Data science workflow](assets/data-science-explore.png)
+
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;p style="font-size: x-small"&gt;
+Image source: &lt;a href="http://r4ds.had.co.nz/"&gt;R for Data Science&lt;/a&gt; by Hadley Wickham &amp; Garrett Grolemund.
+&lt;/p&gt;
+
+---
+class: left
+
+# ggplot2
+
+From the official ggplot2 website:
+
+&gt; [ggplot2](http://ggplot2.tidyverse.org/) is a system for declaratively creating graphics, based on [**The Grammar of Graphics**](http://amzn.to/2ef1eWp). You provide the .red[data], tell ggplot2 how to map variables to .red[aesthetics], what .red[graphical primitives] to use, and it takes care of the details.
+
+--
+
+- R package
+
+--
+
+- Developed by Hadley Wickham (PhD, Iowa State, 2008)
+
+--
+
+- Now part of the tidyverse
+
+--
+
+- Other R graphics systems: base, lattice, grid
+
+--
+
+- Extensible
+
+--
+
+- Worth the learning curve
+
+---
+class: left
+
+# Prerequisites
+
+### Tidyverse
+
+* Opinionated collection of R packages
+* Share underlying design philosophy, grammar, and data structures
+
+### Data frames
+
+* Rectangular data structure
+* Columns represent variables
+* Rows represent observations
+* Tidyverse data frames are called "tibbles"
+
+**Tidyverse packages work with tidy tibbles**
+
+--
+.demo[Demo]
+
+---
+class: left
+
+# Grammar of Graphics
+
+--
+
+- .highlight[Data] (data frame in tidy format)
+
+--
+
+- Layers of .highlight[geom]etric objects and .highlight[stat]istical transformations
+
+--
+
+- .highlight[Scale]s that map data values to (and from) .highlight[aes]thetic space values (location, color, size, etc.)
+
+--
+
+- .highlight[Coord]inate system (Cartesion, map projections, polar)
+
+--
+
+- .highlight[Facet]ing (breaking data into subsets)
+
+--
+
+- .highlight[Theme]s
+
+--
+
+.demo[Demo]
+
+---
+class: left
+
+# ggplot2 template
+
+
+```r
+ggplot(data = &lt;DATA&gt;) + 
+  &lt;GEOM_FUNCTION&gt;(mapping = aes(&lt;MAPPINGS&gt;))
+```
+
+--
+
+More commonly
+
+
+```r
+ggplot(data = &lt;DATA&gt;, mapping = aes(&lt;MAPPINGS&gt;)) + 
+  &lt;GEOM_FUNCTION&gt;()
+```
+
+--
+
+.demo[Demo]
+
+---
+class: left
+
+# Full ggplot2 template
+
+
+```r
+ggplot(data = &lt;DATA&gt;) + 
+  &lt;GEOM_FUNCTION&gt;(
+     mapping = aes(&lt;MAPPINGS&gt;),
+     stat = &lt;STAT&gt;, 
+     position = &lt;POSITION&gt;
+  ) +
+  &lt;COORDINATE_FUNCTION&gt; +
+  &lt;FACET_FUNCTION&gt;
+```
+
+--
+
+More commonly
+
+
+```r
+ggplot(data = &lt;DATA&gt;, mapping = aes(&lt;MAPPINGS&gt;)) + 
+  &lt;GEOM_FUNCTION&gt;(
+     stat = &lt;STAT&gt;, 
+     position = &lt;POSITION&gt;
+  ) +
+  &lt;COORDINATE_FUNCTION&gt; +
+  &lt;FACET_FUNCTION&gt;
+```
+
+---
+class: left
+
+# Five named graphs
+
+Name | Geom
+---- | ----
+Scatterplot | geom_point()
+Linegraph | geom_line()
+Histogram | geom_histogram()
+Boxplot | geom_boxplot()
+Barplot | geom_barplot()
+
+--
+
+.demo[Demo]
+
+---
+class: left
+
+# Other things
+
+- Exploratory vs expository plots
+- Importance of exploratory data visualization
+
+.demo[Demo]
+
+---
+class: middle, center
+
+# Your turn
+
+### ggplot2
+
+.exercise[exercises/01-data-visualization-with-ggplot2.Rmd]
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
