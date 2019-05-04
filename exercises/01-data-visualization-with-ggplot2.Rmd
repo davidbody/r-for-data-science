@@ -1,0 +1,88 @@
+---
+title: "Exercise 1"
+output: html_notebook
+editor_options: 
+  chunk_output_type: inline
+---
+
+# Data visualization with ggplot2
+
+First load the `tidyverse` set of packages.
+
+```{r}
+library(tidyverse)
+```
+
+## First steps
+
+Let's use the `mpg` dataset for the next few exercises.
+
+How many rows are in `mpg`? How many columns?
+
+```{r}
+str(mpg)
+```
+
+What does the `drv` variable desribe? Read the help for `?mpg` to find out.
+
+```{r}
+?mpg
+```
+
+For reference here is the basic `ggplot2` template:
+
+```{r, eval=FALSE}
+ggplot(data = <DATA>) + 
+  <GEOM_FUNCTION>(mapping = aes(<MAPPINGS>))
+```
+
+Use this template and the `mpg` dataset to plot `displ` vs `hwy`. Hint: Use the `geom_point` function.
+
+```{r}
+
+```
+
+What do you think will happen when you run the following code?
+
+```{r}
+ggplot(data = mpg)
+```
+
+Make a scatterplot of `hwy` vs `cyl`. Note that `cyl` takes on only discrete integer values.
+
+```{r}
+
+```
+
+What happens if you make a scatterplot of `class` vs `drv`? Why is the plot not useful?
+
+```{r}
+
+```
+
+## Aesthetic mappings
+
+What's wrong with the following code? Why are the points not blue?
+
+```{r}
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x = displ, y = hwy, color = "blue"))
+```
+
+Copy the code to the following chunk. Can you fix it?
+
+```{r}
+
+```
+
+Which variables in `mpg` are categorical? Which variables are continuous? (Hint: Type `?mpg` to read the documentation for the dataset.)
+
+```{r}
+
+```
+
+Map a continous variable to `color`, `size`, and `shape`. How do these aesthetics behave differently for categorical versus continuous variables?
+
+```{r}
+
+```
