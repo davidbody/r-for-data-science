@@ -19,3 +19,231 @@ options(htmltools.dir.version = FALSE)
 ```
 
 ## Data wrangling with dplyr and tidyr
+
+### Outline
+
+- Coding basics
+  - Assignment
+  - Naming
+  - Calling functions
+
+- Overview of dplyr
+
+- More coding topics
+  - Missing values (NA)
+  - Pipe operator (%>%)
+
+- Demo of tidyr
+
+---
+class: center
+
+# Data science workflow
+
+![Data science workflow](assets/data-science.png)
+
+<br/>
+<br/>
+<br/>
+<br/>
+<p style="font-size: x-small">
+Image source: <a href="http://r4ds.had.co.nz/">R for Data Science</a> by Hadley Wickham & Garrett Grolemund.
+</p>
+
+---
+class: center
+
+# Data science workflow
+
+![Data science workflow](assets/data-science-wrangle.png)
+
+<br/>
+<br/>
+<br/>
+<br/>
+<p style="font-size: x-small">
+Image source: <a href="http://r4ds.had.co.nz/">R for Data Science</a> by Hadley Wickham & Garrett Grolemund.
+</p>
+
+---
+class: left
+
+# Coding basics
+
+Before we get to `dplyr`, let's talk about some basic R coding topics:
+
+### Assignment
+
+```{r}
+x <- 3 * 4
+x
+```
+
+### Naming
+
+Choose names of variables and functions carefully.
+
+```{r}
+modern_idiomatic_r_uses_snake_case <- TRUE
+```
+
+---
+class: left
+
+# Coding basics, continued
+
+### Calling functions
+
+R functions are called like this:
+
+```{r eval=FALSE}
+function_name(arg1 = val1, arg2 = val2, ...)
+```
+
+* Positional arguments
+* Named arguments
+* Arguments may or may not have default values
+* R functions can optionally take an arbitrary number of values (...)
+* Arguments are lazily evaluated
+* R functions always have a return value, possibly `NULL`
+
+---
+class: left
+
+# dplyr package
+
+From the official dplyr website:
+
+> dplyr is a .red[grammar of data manipulation], providing a consistent set of verbs that help you solve the most common data manipulation challenges:
+
+> * .red[mutate()] adds new variables that are functions of existing variables
+
+> * .red[select()] picks variables based on their names.
+
+> * .red[filter()] picks cases based on their values.
+
+> * .red[summarise()] reduces multiple values down to a single summary.
+
+> * .red[arrange()] changes the ordering of the rows.
+
+> These all combine naturally with .red[group_by()] which allows you to perform any operation “by group”.
+
+---
+class: left
+
+# dplyr verbs
+
+* mutate
+* select
+* filter
+* summarize
+* arrange
+* group_by
+
+Each function expects a .red[data frame] as it's first argument.
+
+Subsequent arguments describe .red[what to do].
+
+Result is always a .red[new data frame].
+
+--
+
+.demo[Demo]
+
+---
+class: left
+
+# More coding topics
+
+### Missing values NA
+
+R has a special value `NA` that is used to represent missing values.
+
+```{r}
+NA > 5
+10 == NA
+NA + 10
+NA == NA
+```
+
+---
+class: left
+
+# More coding topics, continued
+
+### Missing values, continued
+
+Use `is.na()` to test for NA.
+
+```{r include=FALSE}
+library(dplyr)
+```
+
+```{r}
+df <- tibble(x = c(1, NA, 3))
+filter(df, x > 1)
+filter(df, is.na(x) | x > 1)
+```
+
+
+---
+class: left
+
+# More coding topics, continued
+
+### Pipe operator %>%
+
+```{r, eval=FALSE}
+foo_foo <- little_bunny()
+
+foo_foo_1 <- hop(foo_foo, through = forest)
+foo_foo_2 <- scoop(foo_foo_1, up = field_mice)
+foo_foo_3 <- bop(foo_foo_2, on = head)
+```
+
+--
+
+compare
+
+```{r, eval=FALSE}
+library(magrittr)
+
+foo_foo %>%
+  hop(through = forest) %>%
+  scoop(up = field_mouse) %>%
+  bop(on = head)
+```
+
+--
+
+.demo[Demo]
+
+---
+class: left
+
+# tidyr package
+
+Definition of .red[tidy data]:
+
+> 1. Each variable is in a column.
+> 2. Each obervation is a row.
+> 3. Each value is a cell.
+
+.red[Tidyverse] packages generally require .red[tidy data frames].
+
+The `tidyr` packages provides some functions for transforming untidy data into tidy data.
+
+The main functions for doing this are .red[gather()] and .red[spread()].
+
+--
+
+.demo[Demo]
+
+---
+class: middle, center
+
+# Your turn
+
+### dplyr
+
+.exercise[exercises/02-data-wrangling-with-dplyr.Rmd]

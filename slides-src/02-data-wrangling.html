@@ -14,7 +14,7 @@ class: middle, center, title-slide
 
 # Data wrangling with dplyr and tidyr
 ### David W. Body
-### 2019-05-01 (updated: 2019-05-02)
+### 2019-05-01 (updated: 2019-05-05)
 
 ---
 
@@ -23,6 +23,286 @@ class:left
 
 
 ## Data wrangling with dplyr and tidyr
+
+### Outline
+
+- Coding basics
+  - Assignment
+  - Naming
+  - Calling functions
+
+- Overview of dplyr
+
+- More coding topics
+  - Missing values (NA)
+  - Pipe operator (%&gt;%)
+
+- Demo of tidyr
+
+---
+class: center
+
+# Data science workflow
+
+![Data science workflow](assets/data-science.png)
+
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;p style="font-size: x-small"&gt;
+Image source: &lt;a href="http://r4ds.had.co.nz/"&gt;R for Data Science&lt;/a&gt; by Hadley Wickham &amp; Garrett Grolemund.
+&lt;/p&gt;
+
+---
+class: center
+
+# Data science workflow
+
+![Data science workflow](assets/data-science-wrangle.png)
+
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;p style="font-size: x-small"&gt;
+Image source: &lt;a href="http://r4ds.had.co.nz/"&gt;R for Data Science&lt;/a&gt; by Hadley Wickham &amp; Garrett Grolemund.
+&lt;/p&gt;
+
+---
+class: left
+
+# Coding basics
+
+Before we get to `dplyr`, let's talk about some basic R coding topics:
+
+### Assignment
+
+
+```r
+x &lt;- 3 * 4
+x
+```
+
+```
+## [1] 12
+```
+
+### Naming
+
+Choose names of variables and functions carefully.
+
+
+```r
+modern_idiomatic_r_uses_snake_case &lt;- TRUE
+```
+
+---
+class: left
+
+# Coding basics, continued
+
+### Calling functions
+
+R functions are called like this:
+
+
+```r
+function_name(arg1 = val1, arg2 = val2, ...)
+```
+
+* Positional arguments
+* Named arguments
+* Arguments may or may not have default values
+* R functions can optionally take an arbitrary number of values (...)
+* Arguments are lazily evaluated
+* R functions always have a return value, possibly `NULL`
+
+---
+class: left
+
+# dplyr package
+
+From the official dplyr website:
+
+&gt; dplyr is a .red[grammar of data manipulation], providing a consistent set of verbs that help you solve the most common data manipulation challenges:
+
+&gt; * .red[mutate()] adds new variables that are functions of existing variables
+
+&gt; * .red[select()] picks variables based on their names.
+
+&gt; * .red[filter()] picks cases based on their values.
+
+&gt; * .red[summarise()] reduces multiple values down to a single summary.
+
+&gt; * .red[arrange()] changes the ordering of the rows.
+
+&gt; These all combine naturally with .red[group_by()] which allows you to perform any operation “by group”.
+
+---
+class: left
+
+# dplyr verbs
+
+* mutate
+* select
+* filter
+* summarize
+* arrange
+* group_by
+
+Each function expects a .red[data frame] as it's first argument.
+
+Subsequent arguments describe .red[what to do].
+
+Result is always a .red[new data frame].
+
+--
+
+.demo[Demo]
+
+---
+class: left
+
+# More coding topics
+
+### Missing values NA
+
+R has a special value `NA` that is used to represent missing values.
+
+
+```r
+NA &gt; 5
+```
+
+```
+## [1] NA
+```
+
+```r
+10 == NA
+```
+
+```
+## [1] NA
+```
+
+```r
+NA + 10
+```
+
+```
+## [1] NA
+```
+
+```r
+NA == NA
+```
+
+```
+## [1] NA
+```
+
+---
+class: left
+
+# More coding topics, continued
+
+### Missing values, continued
+
+Use `is.na()` to test for NA.
+
+
+
+
+```r
+df &lt;- tibble(x = c(1, NA, 3))
+filter(df, x &gt; 1)
+```
+
+```
+## # A tibble: 1 x 1
+##       x
+##   &lt;dbl&gt;
+## 1     3
+```
+
+```r
+filter(df, is.na(x) | x &gt; 1)
+```
+
+```
+## # A tibble: 2 x 1
+##       x
+##   &lt;dbl&gt;
+## 1    NA
+## 2     3
+```
+
+
+---
+class: left
+
+# More coding topics, continued
+
+### Pipe operator %&gt;%
+
+
+```r
+foo_foo &lt;- little_bunny()
+
+foo_foo_1 &lt;- hop(foo_foo, through = forest)
+foo_foo_2 &lt;- scoop(foo_foo_1, up = field_mice)
+foo_foo_3 &lt;- bop(foo_foo_2, on = head)
+```
+
+--
+
+compare
+
+
+```r
+library(magrittr)
+
+foo_foo %&gt;%
+  hop(through = forest) %&gt;%
+  scoop(up = field_mouse) %&gt;%
+  bop(on = head)
+```
+
+--
+
+.demo[Demo]
+
+---
+class: left
+
+# tidyr package
+
+Definition of .red[tidy data]:
+
+&gt; 1. Each variable is in a column.
+&gt; 2. Each obervation is a row.
+&gt; 3. Each value is a cell.
+
+.red[Tidyverse] packages generally require .red[tidy data frames].
+
+The `tidyr` packages provides some functions for transforming untidy data into tidy data.
+
+The main functions for doing this are .red[gather()] and .red[spread()].
+
+--
+
+.demo[Demo]
+
+---
+class: middle, center
+
+# Your turn
+
+### dplyr
+
+.exercise[exercises/02-data-wrangling-with-dplyr.Rmd]
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
