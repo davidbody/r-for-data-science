@@ -1,0 +1,86 @@
+---
+title: "Exercise 2"
+output: html_notebook
+editor_options: 
+  chunk_output_type: inline
+---
+
+# Data wrangling with dplyr
+
+First load the `nycflights13` and `tidyverse` packages.
+
+```{r}
+library(nycflights13)
+library(tidyverse)
+```
+
+## Find all flights that
+
+Had an arrival delay of two or more hours.
+
+```{r}
+flights %>%
+  filter(arr_delay >= 120)
+```
+
+Flew to Houston (IAH or HOU).
+
+```{r}
+flights %>%
+  filter(dest %in% c("IAH", "HOU"))
+```
+
+Were operated by United, American, or Delta. Hint: You may need to look at the documentation for `flights`.
+
+```{r}
+?airlines
+
+airlines
+
+flights %>%
+  filter(carrier %in% c("AA", "DL", "UL"))
+```
+
+Arrived more than two hours late but didn't leave late.
+
+```{r}
+flights %>%
+  filter(arr_delay > 120, dep_delay <= 0 | is.na(dep_delay))
+```
+
+## Grouped summaries
+
+Which carrier has the worst average arrival delay?
+
+```{r}
+
+```
+
+## Add and compare variables [HARD]
+
+Compare `air_time` with `arr_time - dep_time`. What do you expect to see? What do you see? What do you need to do to fix it?
+
+Hint: You might find the following function useful:
+
+```{r}
+# converts times in HHMM or HMM format to minutes since midnight
+time2mins <- function(x) {
+  (x %/% 100 * 60 + x %% 100) %% (60 * 24)
+}
+```
+
+For example, an `arr_time` of 1754 is 1074 minutes after midnight.
+
+```{r}
+arr_time <- 1754
+time2mins(arr_time)
+```
+
+```{r}
+
+```
+
+Hint: Think about flights that depart before midnight and arrive after midnight.
+
+Hint: What about flights with destinations in other time zones?
+
