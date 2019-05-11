@@ -1,0 +1,54 @@
+---
+title: "Exercise 3"
+output: html_notebook
+editor_options: 
+  chunk_output_type: inline
+---
+
+# Exploratory data analysis
+
+First load the `tidyverse` package.
+
+```{r}
+library(tidyverse)
+```
+
+## Visualizing distributions
+
+Explore the distributions of each of the x, y, and z variables in `diamonds`. What do you learn? Think about a diamond and how you might decide which dimension is the length, width, and depth.
+
+```{r}
+
+```
+
+Explore the distribution of price. Do you discover anything unusual or surprising? (Hint: carefully think about the bin width and make sure you try a wide range of values.)
+
+```{r}
+
+```
+
+How many diamonds are 0.99 carat? How many are 1 carat? What do you think is the cause of the difference?
+
+```{r}
+
+```
+
+## Covaration
+
+What variable in the diamonds dataset is most important for predicting the price of a diamond? How is that variable correlated with cut? Why does the combination of those two relationships lead to lower quality diamonds being more expensive?
+
+```{r}
+
+```
+
+Visualize the distribution of carat, partitioned by price.
+
+```{r}
+
+```
+
+How does the price distribution of very large diamonds compare to small diamonds? Is it as you expect, or does it surprise you?
+
+```{r}
+
+```

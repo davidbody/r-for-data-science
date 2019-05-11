@@ -19,3 +19,125 @@ options(htmltools.dir.version = FALSE)
 ```
 
 ## Exploratory data analysis
+
+### Outline
+
+- Iterate
+  - Questions
+  - Visualize, transform, model
+  - Refine questions / generate new questions
+
+- Variation and covariation
+  - Continuous variables
+  - Categorical variables
+
+- More about ggplot2
+
+---
+class: center
+
+# Data science workflow
+
+![Data science workflow](assets/data-science.png)
+
+<br/>
+<br/>
+<br/>
+<br/>
+<p style="font-size: x-small">
+Image source: <a href="http://r4ds.had.co.nz/">R for Data Science</a> by Hadley Wickham & Garrett Grolemund.
+</p>
+
+---
+class: center
+
+# Data science workflow
+
+![Data science workflow](assets/data-science-explore.png)
+
+<br/>
+<br/>
+<br/>
+<br/>
+<p style="font-size: x-small">
+Image source: <a href="http://r4ds.had.co.nz/">R for Data Science</a> by Hadley Wickham & Garrett Grolemund.
+</p>
+
+---
+class: left
+
+# Questions
+
+Goal of EDA is to develop .highlight[understanding] of our data.
+
+Standard approach is to use .highlight[questions] to guide investigation.
+
+Specific questions will depend on the dataset, but generically
+
+1. What type of .highlight[variation] occurs within my variables?
+
+2. What type of .highlight[covariation] occurs between my variables?
+
+---
+class: left
+
+# Terminology
+
+From chapter 7:
+
+> * A .highlight[variable] is a quantity, quality, or property that you can measure.
+
+> * A .highlight[value] is the state of a variable when you measure it. The value of a variable may change from measurement to measurement.
+
+> * An .highlight[observation] is a set of measurements made under similar conditions (you usually make all of the measurements in an observation at the same time and on the same object). An observation will contain several values, each associated with a different variable. I’ll sometimes refer to an observation as a data point.
+
+> * .highlight[Tabular data] is a set of values, each associated with a variable and an observation. Tabular data is .highlight[tidy] if each value is placed in its own “cell”, each variable in its own column, and each observation in its own row.
+
+---
+class: left
+
+# Variation
+
+.highlight[Variation] is the tendency of the values of a variable to change from measurement to measurement.
+
+Sources of variation include differences between subjects and measurement errors.
+
+### Types of variables
+
+A variable is .highlight[categorical] if it can take one of a small set of values.
+
+A variable is .highlight[continuous] if it can take any of an infinite set of ordered values.
+
+We will use slightly different techniques to look at the variation of categorical and continous variables.
+
+--
+.demo[Demo]
+
+---
+class: left
+
+# Covariation
+
+.highlight[Covariation] is the tendency for the values two or more variables to vary in a related way.
+
+Best way to find covariation is the .highlight[plot the variables].
+
+We'll consider the following cases:
+
+* A categorical and continous variable
+
+* Two categorical variables
+
+* Two continuous variables
+
+--
+.demo[Demo]
+
+---
+class: middle, center
+
+# Your turn
+
+### Exploratory Data Analysis
+
+.exercise[exercises/03-exploratory-data-analysis.Rmd]
