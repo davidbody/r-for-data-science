@@ -1,12 +1,13 @@
 ---
 title: "Data Visualization with ggplot2"
-author: "David W. Body"
+author: "R for Data Science workshop"
 date: "2019-05-01 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     css: [default, default-fonts, styles.css]
     lib_dir: libs
     nature:
+      beforeInit: "macros.js"
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
@@ -238,3 +239,10 @@ class: middle, center
 ### ggplot2
 
 .exercise[exercises/01-data-visualization-with-ggplot2.Rmd]
+
+---
+class: center
+
+ggplot2 is extensible
+
+![:scale 40%](assets/geom_brick.png)
