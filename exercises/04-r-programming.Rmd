@@ -1,0 +1,63 @@
+---
+title: "Exercise 4"
+output: html_notebook
+editor_options: 
+  chunk_output_type: inline
+---
+
+# R programming
+
+## Vectors and lists
+
+What does `mean(is.na(x))` tell you about a vector `x`? What about `sum(!is.finite(x))`?
+
+Experiment with the following vector:
+
+```{r}
+x <- c(-Inf, -1, 0, 1, Inf, NA)
+
+```
+
+What happens when you subset with a positive integer that's bigger than the length of the vector? What happens when you subset with a name that doesn't exist?
+
+```{r}
+
+```
+
+
+## Functions
+
+Write a function that takes a vector argument and returns the elements at even numbered positions. Test your function.
+
+```{r}
+
+```
+
+Write a function that takes a numeric vector and returns only even numbers (and no missing values). Test your function.
+
+```{r}
+
+```
+
+## Iteration with purrr map functions
+
+For this part, load the tidyverse package.
+
+```{r}
+library(tidyverse)
+```
+
+Use a map function to compute the mean of every column of `mtcars`.
+
+```{r}
+
+```
+
+[Harder] Use a map function to compute the number of unique values in each column of the `iris` dataset.
+
+Hint: you can pass a formula starting with ~ to the purrr map functions. Read the documentation for `purrr::map`.
+
+```{r}
+
+```
+

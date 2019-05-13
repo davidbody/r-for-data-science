@@ -1,6 +1,6 @@
 ---
-title: "R programming"
-author: "David W. Body"
+title: "R Programming"
+author: "R for Data Science workshop"
 date: "2019-05-01 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
@@ -19,3 +19,117 @@ options(htmltools.dir.version = FALSE)
 ```
 
 ## R Programming
+
+### Outline
+
+- Overview
+
+- Vectors and lists
+
+- Functions
+
+- Iteration with `purrr`
+
+---
+class: center
+
+# Data science workflow
+
+![Data science workflow](assets/data-science.png)
+
+<br/>
+<br/>
+<br/>
+<br/>
+<p style="font-size: x-small">
+Image source: <a href="http://r4ds.had.co.nz/">R for Data Science</a> by Hadley Wickham & Garrett Grolemund.
+</p>
+
+---
+class: center
+
+# Data science workflow
+
+![Data science workflow](assets/data-science-program.png)
+
+<br/>
+<br/>
+<br/>
+<br/>
+<p style="font-size: x-small">
+Image source: <a href="http://r4ds.had.co.nz/">R for Data Science</a> by Hadley Wickham & Garrett Grolemund.
+</p>
+
+---
+class: left
+
+# R Programming
+
+## Overview
+
+- You can't do data science without a computer
+
+- Programming produces code
+
+- Code is a tool of communication
+  - Code tells a computer what to do
+  - Code communicates meaning to other humans
+
+- Getting better at programming means getting better at communicating
+
+---
+class: left
+
+## Vectors and lists
+
+- Atomic vectors (logical, numeric, character)
+
+- Lists
+
+- Using verctors and lists
+
+- Attributes
+
+- Augmented vectors (factors, dates, datetimes, tibbles)
+
+--
+.demo[Demos]
+
+---
+class: left
+
+## Functions
+
+- When should you write a function?
+
+- Functions are for humans and computers
+
+- Conditional execution
+
+- Function arguments and return values
+
+--
+.demo[Demos]
+
+---
+class: left
+
+## Iteration with `purrr`
+
+- For loops
+
+- For loops versus functionals
+
+- The map functions
+
+--
+.demo[Demos]
+
+---
+class: middle, center
+
+# Your turn
+
+### R Programming
+
+.exercise[exercises/04-r-programming.Rmd]

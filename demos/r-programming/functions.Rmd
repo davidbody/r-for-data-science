@@ -1,0 +1,49 @@
+---
+title: "Functions"
+output: html_notebook
+editor_options: 
+  chunk_output_type: inline
+---
+
+The formula for the mean of a sample of $n$ values $X_1$, $X_2$, ... $X_n$ is
+
+$${\overline{X}} = {\frac{1}{n}} \sum_{i=1}^n X_i$$
+
+The formula for sample variance of those values is
+
+$$s^{2}={\frac{1}{n-1}}\sum_{i=1}^{n}\left(X_{i}-{\overline{X}}\right)^{2}$$
+
+where ${\overline{X}}$ is the sample mean.
+
+Even though R already has functions to compute these values, let's write our own for practice.
+
+```{r}
+my_mean <- function(x) {
+}
+```
+
+```{r}
+my_mean(1:10)
+```
+
+Compare R's `mean` function.
+
+```{r}
+mean(1:10)
+```
+
+```{r}
+my_variance <- function(x) {
+}
+```
+
+```{r}
+my_variance(1:10)
+```
+
+Compare R's `var` function.
+
+```{r}
+var(1:10)
+```
+
