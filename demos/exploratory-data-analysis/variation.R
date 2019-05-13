@@ -41,3 +41,31 @@ diamonds %>%
 diamonds %>%
   ggplot() +
   geom_histogram(aes(x = carat), binwidth = 0.01)
+
+# Empirical cumulative distribution functions (ECDF)
+
+# Consider normal distribution
+
+df <- tibble(x = seq(-4, 4, length.out = 200), df = dnorm(x)) %>%
+  ggplot(aes(x, df)) +
+  geom_line()
+
+cdf <- tibble(x = seq(-4, 4, length.out = 200), cdf = pnorm(x)) %>%
+  ggplot(aes(x, cdf)) +
+  geom_line()
+
+gridExtra::grid.arrange(df, cdf, ncol = 1)
+
+# ECDF
+
+diamonds %>%
+  ggplot(aes(carat)) +
+  geom_line(stat = "ecdf")
+
+diamonds %>%
+  ggplot(aes(carat)) +
+  geom_step(stat = "ecdf")
+
+diamonds %>%
+  ggplot(aes(carat)) +
+  stat_ecdf(geom = "step")
