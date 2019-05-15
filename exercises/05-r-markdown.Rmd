@@ -1,0 +1,10 @@
+---
+title: "Exercise 5"
+output: html_notebook
+editor_options: 
+  chunk_output_type: inline
+---
+
+# R Markdown
+
+Create a new R Markdown document with *File > New File > R Markdown…* Knit it by clicking the appropriate button. Knit it by using the appropriate keyboard short cut. Verify that you can modify the input and see the output update.
