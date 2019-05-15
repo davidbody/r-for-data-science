@@ -69,7 +69,7 @@ ggplot(data = mpg) +
   geom_point(mapping = aes(x = displ, y = hwy, color = "blue"))
 ```
 
-Copy the code to the following chunk. Can you fix it?
+Copy the code above to the following chunk. Can you fix it?
 
 ```{r}
 
