@@ -21,7 +21,7 @@ lm(y4 ~ x4, data = anscombe)
 cs <- c(3.0, 0.5)
 cs
 
-ggplot(anscombe) + geom_abline(intercept = cs[1], slope = cs[2]) +
+ggplot() + geom_abline(intercept = cs[1], slope = cs[2]) +
   scale_x_continuous(limits = c(0, 15)) +
   scale_y_continuous(limits = c(0, 10))
 
@@ -39,7 +39,7 @@ anscombe_tidy %>%
   facet_wrap(~ set) +
   geom_smooth(method = "lm", se = FALSE, fullrange = TRUE)
 
-ds <- read_csv("demos/data-visualization-with-ggplot2/Datasaurus_data.csv", col_names = c("x", "y"))
+ds <- read_csv("demos/exploratory-data-analysis/Datasaurus_data.csv", col_names = c("x", "y"))
 summary(ds)
 summary(lm(y ~ x, ds))
 

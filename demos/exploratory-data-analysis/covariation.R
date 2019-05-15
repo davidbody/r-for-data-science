@@ -56,8 +56,8 @@ diamonds %>%
 # Another is geom_jitter() [add alpha]
 
 diamonds %>%
-  ggplot(aes(color, cut))
-  geom_jitter()
+  ggplot(aes(color, cut)) +
+  geom_jitter(alpha = 0.1)
 
 # Another is compute the counts ourselves and plot a heatmap
 
