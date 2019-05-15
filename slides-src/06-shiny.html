@@ -3,7 +3,7 @@
   <head>
     <title>Shiny</title>
     <meta charset="utf-8" />
-    <meta name="author" content="David W. Body" />
+    <meta name="author" content="R for Data Science workshop" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" type="text/css" />
@@ -13,8 +13,8 @@
 class: middle, center, title-slide
 
 # Shiny
-### David W. Body
-### 2019-05-01 (updated: 2019-05-02)
+### R for Data Science workshop
+### 2019-05-01 (updated: 2019-05-14)
 
 ---
 
@@ -23,6 +23,144 @@ class:left
 
 
 ## Shiny
+
+### Outline
+
+- Overview
+
+- Shiny app structure
+
+- Reactivity
+
+- File structure
+
+- Publishing your app
+
+---
+class: center
+
+# Data science workflow
+
+![Data science workflow](assets/data-science.png)
+
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;p style="font-size: x-small"&gt;
+Image source: &lt;a href="http://r4ds.had.co.nz/"&gt;R for Data Science&lt;/a&gt; by Hadley Wickham &amp; Garrett Grolemund.
+&lt;/p&gt;
+
+---
+class: center
+
+# Data science workflow
+
+![Data science workflow](assets/data-science-communicate.png)
+
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;p style="font-size: x-small"&gt;
+Image source: &lt;a href="http://r4ds.had.co.nz/"&gt;R for Data Science&lt;/a&gt; by Hadley Wickham &amp; Garrett Grolemund.
+&lt;/p&gt;
+
+---
+class: left
+
+# Shiny
+
+## Overview
+
+- Web apps written completely in R
+
+- Shiny generates a web UI consisting of HTML, CSS, &amp; JavaScript
+
+- The web server executes R code
+
+- The UI interacts with the R server using websockets
+
+- You only have to write R code
+
+---
+class: left
+
+# Shiny
+
+## Shiny app structure
+
+
+```r
+library(shiny)
+
+ui &lt;- fluidPage()
+
+server &lt;- function(input, output) {}
+
+shinyApp(ui = ui, server = server)
+```
+
+--
+.demo[Demo]
+
+---
+class: left
+
+# Shiny
+
+## Reactivity
+
+Shiny has three kinds of objects for reactive programming.
+
+![Reactive roles](assets/reactive-roles.png)
+
+The simplest structure of a reactive program ivnolves just a source and an endpoint:
+
+![Simplest](assets/simplest.png)
+
+---
+class: left
+
+# Shiny
+
+## Reactivity example
+
+
+```r
+server &lt;- function(input, output) {
+  output$distPlot &lt;- renderPlot({
+    hist(rnorm(input$obs))
+  })
+}
+```
+
+![](assets/01_hello.png)
+
+See it in action: https://gallery.shinyapps.io/01_hello/
+
+---
+class: left
+
+# Shiny
+
+## Movies app example
+
+From the Intro to Shiny webinar from RStudio
+
+https://resources.rstudio.com/webinars
+
+--
+.demo[Demo]
+
+---
+class: middle, center
+
+# Your turn
+
+### Shiny
+
+.exercise[Create a shiny web app!]
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

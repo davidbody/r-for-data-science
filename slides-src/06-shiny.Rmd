@@ -1,6 +1,6 @@
 ---
 title: "Shiny"
-author: "David W. Body"
+author: "R for Data Science workshop"
 date: "2019-05-01 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
@@ -19,3 +19,139 @@ options(htmltools.dir.version = FALSE)
 ```
 
 ## Shiny
+
+### Outline
+
+- Overview
+
+- Shiny app structure
+
+- Reactivity
+
+- File structure
+
+- Publishing your app
+
+---
+class: center
+
+# Data science workflow
+
+![Data science workflow](assets/data-science.png)
+
+<br/>
+<br/>
+<br/>
+<br/>
+<p style="font-size: x-small">
+Image source: <a href="http://r4ds.had.co.nz/">R for Data Science</a> by Hadley Wickham & Garrett Grolemund.
+</p>
+
+---
+class: center
+
+# Data science workflow
+
+![Data science workflow](assets/data-science-communicate.png)
+
+<br/>
+<br/>
+<br/>
+<br/>
+<p style="font-size: x-small">
+Image source: <a href="http://r4ds.had.co.nz/">R for Data Science</a> by Hadley Wickham & Garrett Grolemund.
+</p>
+
+---
+class: left
+
+# Shiny
+
+## Overview
+
+- Web apps written completely in R
+
+- Shiny generates a web UI consisting of HTML, CSS, & JavaScript
+
+- The web server executes R code
+
+- The UI interacts with the R server using websockets
+
+- You only have to write R code
+
+---
+class: left
+
+# Shiny
+
+## Shiny app structure
+
+```{r eval=FALSE}
+library(shiny)
+
+ui <- fluidPage()
+
+server <- function(input, output) {}
+
+shinyApp(ui = ui, server = server)
+```
+
+--
+.demo[Demo]
+
+---
+class: left
+
+# Shiny
+
+## Reactivity
+
+Shiny has three kinds of objects for reactive programming.
+
+![Reactive roles](assets/reactive-roles.png)
+
+The simplest structure of a reactive program ivnolves just a source and an endpoint:
+
+![Simplest](assets/simplest.png)
+
+---
+class: left
+
+# Shiny
+
+## Reactivity example
+
+```{r, eval=FALSE}
+server <- function(input, output) {
+  output$distPlot <- renderPlot({
+    hist(rnorm(input$obs))
+  })
+}
+```
+
+![](assets/01_hello.png)
+
+See it in action: https://gallery.shinyapps.io/01_hello/
+
+---
+class: left
+
+# Shiny
+
+## Movies app example
+
+From the Intro to Shiny webinar from RStudio
+
+https://resources.rstudio.com/webinars
+
+--
+.demo[Demo]
+
+---
+class: middle, center
+
+# Your turn
+
+### Shiny
+
+.exercise[Create a shiny web app!]
