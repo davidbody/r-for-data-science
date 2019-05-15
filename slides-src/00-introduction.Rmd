@@ -1,6 +1,6 @@
 ---
 title: "R for Data Science"
-author: "David W. Body"
+author: "R for Data Science workshop"
 date: "2019-05-01 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
@@ -46,6 +46,17 @@ My goals for me
   - RStudio Cloud
 * Feedback so I can improve the workshop
 * Have fun
+
+---
+class: left
+
+# Welcome
+
+## Introductions
+
+* Your name
+* Why are you here?
+* One other thing about you
 
 ---
 class:left
