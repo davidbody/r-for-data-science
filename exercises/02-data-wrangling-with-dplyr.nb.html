@@ -1783,41 +1783,21 @@ library(tidyverse)</code></pre>
 <p>Had an arrival delay of two or more hours.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZmxpZ2h0cyAlPiVcbiAgZmlsdGVyKGFycl9kZWxheSA+PSAxMjApXG5gYGAifQ== -->
-<pre class="r"><code>flights %&gt;%
-  filter(arr_delay &gt;= 120)</code></pre>
-<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Flew to Houston (IAH or HOU).</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZmxpZ2h0cyAlPiVcbiAgZmlsdGVyKGRlc3QgJWluJSBjKFwiSUFIXCIsIFwiSE9VXCIpKVxuYGBgIn0= -->
-<pre class="r"><code>flights %&gt;%
-  filter(dest %in% c(&quot;IAH&quot;, &quot;HOU&quot;))</code></pre>
-<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>Were operated by United, American, or Delta. Hint: You may need to look at the documentation for <code>flights</code>.</p>
+<p>Were operated by United, American, or Delta. Hint: You may need to look at the documentation for <code>airlines</code> and <code>flights</code>.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuP2FpcmxpbmVzXG5cbmFpcmxpbmVzXG5cbmZsaWdodHMgJT4lXG4gIGZpbHRlcihjYXJyaWVyICVpbiUgYyhcIkFBXCIsIFwiRExcIiwgXCJVTFwiKSlcbmBgYCJ9 -->
-<pre class="r"><code>?airlines
-
-airlines
-
-flights %&gt;%
-  filter(carrier %in% c(&quot;AA&quot;, &quot;DL&quot;, &quot;UL&quot;))</code></pre>
-<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Arrived more than two hours late but didn’t leave late.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZmxpZ2h0cyAlPiVcbiAgZmlsdGVyKGFycl9kZWxheSA+IDEyMCwgZGVwX2RlbGF5IDw9IDAgfCBpcy5uYShkZXBfZGVsYXkpKVxuYGBgIn0= -->
-<pre class="r"><code>flights %&gt;%
-  filter(arr_delay &gt; 120, dep_delay &lt;= 0 | is.na(dep_delay))</code></pre>
-<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -1862,7 +1842,7 @@ time2mins(arr_time)</code></pre>
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiRXhlcmNpc2UgMiIKb3V0cHV0OiBodG1sX25vdGVib29rCmVkaXRvcl9vcHRpb25zOiAKICBjaHVua19vdXRwdXRfdHlwZTogaW5saW5lCi0tLQoKIyBEYXRhIHdyYW5nbGluZyB3aXRoIGRwbHlyCgpGaXJzdCBsb2FkIHRoZSBgbnljZmxpZ2h0czEzYCBhbmQgYHRpZHl2ZXJzZWAgcGFja2FnZXMuCgpgYGB7cn0KbGlicmFyeShueWNmbGlnaHRzMTMpCmxpYnJhcnkodGlkeXZlcnNlKQpgYGAKCiMjIEZpbmQgYWxsIGZsaWdodHMgdGhhdAoKSGFkIGFuIGFycml2YWwgZGVsYXkgb2YgdHdvIG9yIG1vcmUgaG91cnMuCgpgYGB7cn0KZmxpZ2h0cyAlPiUKICBmaWx0ZXIoYXJyX2RlbGF5ID49IDEyMCkKYGBgCgpGbGV3IHRvIEhvdXN0b24gKElBSCBvciBIT1UpLgoKYGBge3J9CmZsaWdodHMgJT4lCiAgZmlsdGVyKGRlc3QgJWluJSBjKCJJQUgiLCAiSE9VIikpCmBgYAoKV2VyZSBvcGVyYXRlZCBieSBVbml0ZWQsIEFtZXJpY2FuLCBvciBEZWx0YS4gSGludDogWW91IG1heSBuZWVkIHRvIGxvb2sgYXQgdGhlIGRvY3VtZW50YXRpb24gZm9yIGBmbGlnaHRzYC4KCmBgYHtyfQo/YWlybGluZXMKCmFpcmxpbmVzCgpmbGlnaHRzICU+JQogIGZpbHRlcihjYXJyaWVyICVpbiUgYygiQUEiLCAiREwiLCAiVUwiKSkKYGBgCgpBcnJpdmVkIG1vcmUgdGhhbiB0d28gaG91cnMgbGF0ZSBidXQgZGlkbid0IGxlYXZlIGxhdGUuCgpgYGB7cn0KZmxpZ2h0cyAlPiUKICBmaWx0ZXIoYXJyX2RlbGF5ID4gMTIwLCBkZXBfZGVsYXkgPD0gMCB8IGlzLm5hKGRlcF9kZWxheSkpCmBgYAoKIyMgR3JvdXBlZCBzdW1tYXJpZXMKCldoaWNoIGNhcnJpZXIgaGFzIHRoZSB3b3JzdCBhdmVyYWdlIGFycml2YWwgZGVsYXk/CgpgYGB7cn0KCmBgYAoKIyMgQWRkIGFuZCBjb21wYXJlIHZhcmlhYmxlcyBbSEFSRF0KCkNvbXBhcmUgYGFpcl90aW1lYCB3aXRoIGBhcnJfdGltZSAtIGRlcF90aW1lYC4gV2hhdCBkbyB5b3UgZXhwZWN0IHRvIHNlZT8gV2hhdCBkbyB5b3Ugc2VlPyBXaGF0IGRvIHlvdSBuZWVkIHRvIGRvIHRvIGZpeCBpdD8KCkhpbnQ6IFlvdSBtaWdodCBmaW5kIHRoZSBmb2xsb3dpbmcgZnVuY3Rpb24gdXNlZnVsOgoKYGBge3J9CiMgY29udmVydHMgdGltZXMgaW4gSEhNTSBvciBITU0gZm9ybWF0IHRvIG1pbnV0ZXMgc2luY2UgbWlkbmlnaHQKdGltZTJtaW5zIDwtIGZ1bmN0aW9uKHgpIHsKICAoeCAlLyUgMTAwICogNjAgKyB4ICUlIDEwMCkgJSUgKDYwICogMjQpCn0KYGBgCgpGb3IgZXhhbXBsZSwgYW4gYGFycl90aW1lYCBvZiAxNzU0IGlzIDEwNzQgbWludXRlcyBhZnRlciBtaWRuaWdodC4KCmBgYHtyfQphcnJfdGltZSA8LSAxNzU0CnRpbWUybWlucyhhcnJfdGltZSkKYGBgCgpgYGB7cn0KCmBgYAoKSGludDogVGhpbmsgYWJvdXQgZmxpZ2h0cyB0aGF0IGRlcGFydCBiZWZvcmUgbWlkbmlnaHQgYW5kIGFycml2ZSBhZnRlciBtaWRuaWdodC4KCkhpbnQ6IFdoYXQgYWJvdXQgZmxpZ2h0cyB3aXRoIGRlc3RpbmF0aW9ucyBpbiBvdGhlciB0aW1lIHpvbmVzPwoK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiRXhlcmNpc2UgMiIKb3V0cHV0OiBodG1sX25vdGVib29rCmVkaXRvcl9vcHRpb25zOiAKICBjaHVua19vdXRwdXRfdHlwZTogaW5saW5lCi0tLQoKIyBEYXRhIHdyYW5nbGluZyB3aXRoIGRwbHlyCgpGaXJzdCBsb2FkIHRoZSBgbnljZmxpZ2h0czEzYCBhbmQgYHRpZHl2ZXJzZWAgcGFja2FnZXMuCgpgYGB7cn0KbGlicmFyeShueWNmbGlnaHRzMTMpCmxpYnJhcnkodGlkeXZlcnNlKQpgYGAKCiMjIEZpbmQgYWxsIGZsaWdodHMgdGhhdAoKSGFkIGFuIGFycml2YWwgZGVsYXkgb2YgdHdvIG9yIG1vcmUgaG91cnMuCgpgYGB7cn0KCmBgYAoKRmxldyB0byBIb3VzdG9uIChJQUggb3IgSE9VKS4KCmBgYHtyfQoKYGBgCgpXZXJlIG9wZXJhdGVkIGJ5IFVuaXRlZCwgQW1lcmljYW4sIG9yIERlbHRhLiBIaW50OiBZb3UgbWF5IG5lZWQgdG8gbG9vayBhdCB0aGUgZG9jdW1lbnRhdGlvbiBmb3IgYGFpcmxpbmVzYCBhbmQgYGZsaWdodHNgLgoKYGBge3J9CgpgYGAKCkFycml2ZWQgbW9yZSB0aGFuIHR3byBob3VycyBsYXRlIGJ1dCBkaWRuJ3QgbGVhdmUgbGF0ZS4KCmBgYHtyfQoKYGBgCgojIyBHcm91cGVkIHN1bW1hcmllcwoKV2hpY2ggY2FycmllciBoYXMgdGhlIHdvcnN0IGF2ZXJhZ2UgYXJyaXZhbCBkZWxheT8KCmBgYHtyfQoKYGBgCgojIyBBZGQgYW5kIGNvbXBhcmUgdmFyaWFibGVzIFtIQVJEXQoKQ29tcGFyZSBgYWlyX3RpbWVgIHdpdGggYGFycl90aW1lIC0gZGVwX3RpbWVgLiBXaGF0IGRvIHlvdSBleHBlY3QgdG8gc2VlPyBXaGF0IGRvIHlvdSBzZWU/IFdoYXQgZG8geW91IG5lZWQgdG8gZG8gdG8gZml4IGl0PwoKSGludDogWW91IG1pZ2h0IGZpbmQgdGhlIGZvbGxvd2luZyBmdW5jdGlvbiB1c2VmdWw6CgpgYGB7cn0KIyBjb252ZXJ0cyB0aW1lcyBpbiBISE1NIG9yIEhNTSBmb3JtYXQgdG8gbWludXRlcyBzaW5jZSBtaWRuaWdodAp0aW1lMm1pbnMgPC0gZnVuY3Rpb24oeCkgewogICh4ICUvJSAxMDAgKiA2MCArIHggJSUgMTAwKSAlJSAoNjAgKiAyNCkKfQpgYGAKCkZvciBleGFtcGxlLCBhbiBgYXJyX3RpbWVgIG9mIDE3NTQgaXMgMTA3NCBtaW51dGVzIGFmdGVyIG1pZG5pZ2h0LgoKYGBge3J9CmFycl90aW1lIDwtIDE3NTQKdGltZTJtaW5zKGFycl90aW1lKQpgYGAKCmBgYHtyfQoKYGBgCgpIaW50OiBUaGluayBhYm91dCBmbGlnaHRzIHRoYXQgZGVwYXJ0IGJlZm9yZSBtaWRuaWdodCBhbmQgYXJyaXZlIGFmdGVyIG1pZG5pZ2h0LgoKSGludDogV2hhdCBhYm91dCBmbGlnaHRzIHdpdGggZGVzdGluYXRpb25zIGluIG90aGVyIHRpbWUgem9uZXM/Cgo=</div>
 
 
 

@@ -19,33 +19,25 @@ library(tidyverse)
 Had an arrival delay of two or more hours.
 
 ```{r}
-flights %>%
-  filter(arr_delay >= 120)
+
 ```
 
 Flew to Houston (IAH or HOU).
 
 ```{r}
-flights %>%
-  filter(dest %in% c("IAH", "HOU"))
+
 ```
 
-Were operated by United, American, or Delta. Hint: You may need to look at the documentation for `flights`.
+Were operated by United, American, or Delta. Hint: You may need to look at the documentation for `airlines` and `flights`.
 
 ```{r}
-?airlines
 
-airlines
-
-flights %>%
-  filter(carrier %in% c("AA", "DL", "UL"))
 ```
 
 Arrived more than two hours late but didn't leave late.
 
 ```{r}
-flights %>%
-  filter(arr_delay > 120, dep_delay <= 0 | is.na(dep_delay))
+
 ```
 
 ## Grouped summaries
