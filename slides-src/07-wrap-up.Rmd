@@ -1,0 +1,62 @@
+---
+title: "Wrap up"
+author: "R for Data Science workshop"
+date: "2019-05-16 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    css: [default, default-fonts, styles.css]
+    lib_dir: libs
+    nature:
+      beforeInit: "macros.js"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      titleSlideClass: [middle, center]
+---
+class: center, middle
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+# Thank you!
+
+---
+class: left
+# R for Data Science
+
+We covered
+
+* Visualizing data with ggplot2
+
+* Data wrangling with dplyr and tidyr
+
+* Exploratory data analysis
+
+* R programming
+
+* RMarkdown
+
+* Shiny
+
+---
+class: center
+
+# Data science workflow
+
+![Data science workflow](assets/data-science.png)
+
+<br/>
+<br/>
+<br/>
+<br/>
+<p style="font-size: x-small">
+Image source: <a href="http://r4ds.had.co.nz/">R for Data Science</a> by Hadley Wickham & Garrett Grolemund.
+</p>
+
+---
+class: center
+
+Read the book for much more.
+
+![:scale 50%](assets/r4ds-cover.png)
