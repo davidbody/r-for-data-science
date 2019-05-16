@@ -16,7 +16,8 @@ p + geom_smooth(data = mpg,
 
 ggplot(data = mpg,
        mapping = aes(x = displ, y = hwy)) +
-  geom_point()
+  geom_point() +
+  geom_smooth()
 
 ggplot(mpg, aes(displ, hwy)) +
   geom_point()
