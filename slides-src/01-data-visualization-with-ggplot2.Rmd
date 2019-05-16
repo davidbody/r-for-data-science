@@ -207,7 +207,7 @@ ggplot(data = <DATA>, mapping = aes(<MAPPINGS>)) +
 ---
 class: left
 
-# Five named graphs
+# Some named graphs and their geoms
 
 Name | Geom
 ---- | ----
@@ -222,14 +222,11 @@ Barplot | geom_barplot()
 .demo[Demo]
 
 ---
-class: left
+class: center
 
-# Other things
+ggplot2 is extensible
 
-- Exploratory vs expository plots
-- Importance of exploratory data visualization
-
-.demo[Demo]
+![:scale 40%](assets/geom_brick.png)
 
 ---
 class: middle, center
@@ -239,10 +236,3 @@ class: middle, center
 ### ggplot2
 
 .exercise[exercises/01-data-visualization-with-ggplot2.Rmd]
-
----
-class: center
-
-ggplot2 is extensible
-
-![:scale 40%](assets/geom_brick.png)
