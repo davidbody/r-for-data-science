@@ -114,24 +114,29 @@ class: left
 
 ## Code chunks
 
-~~~~
-```{r mychunk}
-x <- 5
-```
-~~~~
-
-creates an R code chunk named "mychunk".
-
 **knitr** provides almost 60 options for code chunks.
 
-Easiest way to learn them is to use RStudio.
+RStudio provides help for the most common ones.
 
+--
+
+.demo[Demo]
+
+Couldn't figure out how to display markdown in markdown. 🙂
 
 ---
-class: middle, center
+class: center
 
 # Your turn
 
 ### R Markdown
 
-.exercise[exercises/05-r-markdown.Rmd]
+.left[
+* Create a new R Markdown document with *File > New File > R Markdown…*
+
+* Knit it by clicking the appropriate button.
+
+* Knit it by using the appropriate keyboard short cut.
+
+* Verify that you can modify the input and see the output update.
+]
