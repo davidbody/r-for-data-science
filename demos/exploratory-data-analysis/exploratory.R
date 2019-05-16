@@ -26,8 +26,8 @@ ggplot() + geom_abline(intercept = cs[1], slope = cs[2]) +
   scale_y_continuous(limits = c(0, 10))
 
 anscombe_tidy <- anscombe %>%
-  mutate(observation = seq_len(n())) %>%
-  gather(key, value, -observation) %>%
+  rowid_to_column() %>%
+  gather(key, value, -rowid) %>%
   separate(key, c("variable", "set"), 1, convert = TRUE) %>%
   spread(variable, value)
 
