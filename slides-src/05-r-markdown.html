@@ -89,6 +89,15 @@ class: left
 
 # R Markdown basics
 
+Many output formats are available. See [Formats](https://rmarkdown.rstudio.com/formats.html) at rmarkdown.rstudio.com.
+
+
+
+---
+class: left
+
+# R Markdown basics
+
 ## Plain text file with extension *.Rmd*
 
 ## Three types of content
@@ -122,11 +131,53 @@ class: left
 
 RStudio provides help for the most common ones.
 
+Inline code too.
+
 --
 
 .demo[Demo]
 
 Couldn't figure out how to display markdown in markdown. 🙂
+
+---
+class: left
+
+## YAML header
+
+* Used for "whole document" settings.
+
+* Can use it to parameterize a document.
+
+```{---
+title: "Parameters example"
+output: html_document
+params:
+  year: 2019
+---
+```
+  - Knit with parameters or
+
+```r
+    rmarkdown::render("my-report.Rmd", params = list(year = 2019))
+```
+
+In the document, use parameters like this in a code chunk:
+
+
+```r
+filter(year == params$year)
+```
+
+* Much more
+
+---
+class: left
+
+# R Markdown resources
+
+* Extensive documentation and examples at [rmarkdown.rstudio.com](https://rmarkdown.rstudio.com/)
+
+* [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/) by Yihui Xie, J. J. Allaire, Garrett Grolemund
 
 ---
 class: center
