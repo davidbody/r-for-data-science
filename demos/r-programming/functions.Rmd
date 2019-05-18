@@ -5,6 +5,8 @@ editor_options:
   chunk_output_type: inline
 ---
 
+# LaTeX
+
 The formula for the mean of a sample of $n$ values $X_1$, $X_2$, ... $X_n$ is
 
 $${\overline{X}} = {\frac{1}{n}} \sum_{i=1}^n X_i$$

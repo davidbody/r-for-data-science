@@ -86,7 +86,7 @@ class: left
 
 - Lists
 
-- Using verctors and lists
+- Using vectors and lists
 
 - Attributes
 

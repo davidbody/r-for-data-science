@@ -1767,6 +1767,8 @@ $(document).ready(function () {
 
 
 <!-- rnb-text-begin -->
+<div id="latex" class="section level1">
+<h1>LaTeX</h1>
 <p>The formula for the mean of a sample of <span class="math inline">\(n\)</span> values <span class="math inline">\(X_1\)</span>, <span class="math inline">\(X_2\)</span>, … <span class="math inline">\(X_n\)</span> is</p>
 <p><span class="math display">\[{\overline{X}} = {\frac{1}{n}} \sum_{i=1}^n X_i\]</span></p>
 <p>The formula for sample variance of those values is</p>
@@ -1775,53 +1777,58 @@ $(document).ready(function () {
 <p>Even though R already has functions to compute these values, let’s write our own for practice.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXlfbWVhbiA8LSBmdW5jdGlvbih4KSB7XG59XG5gYGAifQ== -->
-<pre class="r"><code>my_mean &lt;- function(x) {
-}</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubXlfbWVhbiA8LSBmdW5jdGlvbih4KSB7XG59XG5gYGBcbmBgYCJ9 -->
+<p><code>r</code>r my_mean &lt;- function(x) { }</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXlfbWVhbigxOjEwKVxuYGBgIn0= -->
-<pre class="r"><code>my_mean(1:10)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubXlfbWVhbigxOjEwKVxuYGBgXG5gYGAifQ== -->
+<p><code>r</code>r my_mean(1:10)</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Compare R’s <code>mean</code> function.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubWVhbigxOjEwKVxuYGBgIn0= -->
-<pre class="r"><code>mean(1:10)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubWVhbigxOjEwKVxuYGBgXG5gYGAifQ== -->
+<p><code>r</code>r mean(1:10)</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXlfdmFyaWFuY2UgPC0gZnVuY3Rpb24oeCkge1xufVxuYGBgIn0= -->
-<pre class="r"><code>my_variance &lt;- function(x) {
-}</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubXlfdmFyaWFuY2UgPC0gZnVuY3Rpb24oeCkge1xufVxuYGBgXG5gYGAifQ== -->
+<p><code>r</code>r my_variance &lt;- function(x) { }</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXlfdmFyaWFuY2UoMToxMClcbmBgYCJ9 -->
-<pre class="r"><code>my_variance(1:10)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubXlfdmFyaWFuY2UoMToxMClcbmBgYFxuYGBgIn0= -->
+<p><code>r</code>r my_variance(1:10)</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Compare R’s <code>var</code> function.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudmFyKDE6MTApXG5gYGAifQ== -->
-<pre class="r"><code>var(1:10)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxudmFyKDE6MTApXG5gYGBcbmBgYCJ9 -->
+<p><code>r</code>r var(1:10)</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
+</div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiRnVuY3Rpb25zIgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKZWRpdG9yX29wdGlvbnM6IAogIGNodW5rX291dHB1dF90eXBlOiBpbmxpbmUKLS0tCgpUaGUgZm9ybXVsYSBmb3IgdGhlIG1lYW4gb2YgYSBzYW1wbGUgb2YgJG4kIHZhbHVlcyAkWF8xJCwgJFhfMiQsIC4uLiAkWF9uJCBpcwoKJCR7XG92ZXJsaW5le1h9fSA9IHtcZnJhY3sxfXtufX0gXHN1bV97aT0xfV5uIFhfaSQkCgpUaGUgZm9ybXVsYSBmb3Igc2FtcGxlIHZhcmlhbmNlIG9mIHRob3NlIHZhbHVlcyBpcwoKJCRzXnsyfT17XGZyYWN7MX17bi0xfX1cc3VtX3tpPTF9XntufVxsZWZ0KFhfe2l9LXtcb3ZlcmxpbmV7WH19XHJpZ2h0KV57Mn0kJAoKd2hlcmUgJHtcb3ZlcmxpbmV7WH19JCBpcyB0aGUgc2FtcGxlIG1lYW4uCgpFdmVuIHRob3VnaCBSIGFscmVhZHkgaGFzIGZ1bmN0aW9ucyB0byBjb21wdXRlIHRoZXNlIHZhbHVlcywgbGV0J3Mgd3JpdGUgb3VyIG93biBmb3IgcHJhY3RpY2UuCgpgYGB7cn0KbXlfbWVhbiA8LSBmdW5jdGlvbih4KSB7Cn0KYGBgCgpgYGB7cn0KbXlfbWVhbigxOjEwKQpgYGAKCkNvbXBhcmUgUidzIGBtZWFuYCBmdW5jdGlvbi4KCmBgYHtyfQptZWFuKDE6MTApCmBgYAoKYGBge3J9Cm15X3ZhcmlhbmNlIDwtIGZ1bmN0aW9uKHgpIHsKfQpgYGAKCmBgYHtyfQpteV92YXJpYW5jZSgxOjEwKQpgYGAKCkNvbXBhcmUgUidzIGB2YXJgIGZ1bmN0aW9uLgoKYGBge3J9CnZhcigxOjEwKQpgYGAKCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiRnVuY3Rpb25zIgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKZWRpdG9yX29wdGlvbnM6IAogIGNodW5rX291dHB1dF90eXBlOiBpbmxpbmUKLS0tCgojIExhVGVYCgpUaGUgZm9ybXVsYSBmb3IgdGhlIG1lYW4gb2YgYSBzYW1wbGUgb2YgJG4kIHZhbHVlcyAkWF8xJCwgJFhfMiQsIC4uLiAkWF9uJCBpcwoKJCR7XG92ZXJsaW5le1h9fSA9IHtcZnJhY3sxfXtufX0gXHN1bV97aT0xfV5uIFhfaSQkCgpUaGUgZm9ybXVsYSBmb3Igc2FtcGxlIHZhcmlhbmNlIG9mIHRob3NlIHZhbHVlcyBpcwoKJCRzXnsyfT17XGZyYWN7MX17bi0xfX1cc3VtX3tpPTF9XntufVxsZWZ0KFhfe2l9LXtcb3ZlcmxpbmV7WH19XHJpZ2h0KV57Mn0kJAoKd2hlcmUgJHtcb3ZlcmxpbmV7WH19JCBpcyB0aGUgc2FtcGxlIG1lYW4uCgpFdmVuIHRob3VnaCBSIGFscmVhZHkgaGFzIGZ1bmN0aW9ucyB0byBjb21wdXRlIHRoZXNlIHZhbHVlcywgbGV0J3Mgd3JpdGUgb3VyIG93biBmb3IgcHJhY3RpY2UuCgpgYGB7cn0KbXlfbWVhbiA8LSBmdW5jdGlvbih4KSB7Cn0KYGBgCgpgYGB7cn0KbXlfbWVhbigxOjEwKQpgYGAKCkNvbXBhcmUgUidzIGBtZWFuYCBmdW5jdGlvbi4KCmBgYHtyfQptZWFuKDE6MTApCmBgYAoKYGBge3J9Cm15X3ZhcmlhbmNlIDwtIGZ1bmN0aW9uKHgpIHsKfQpgYGAKCmBgYHtyfQpteV92YXJpYW5jZSgxOjEwKQpgYGAKCkNvbXBhcmUgUidzIGB2YXJgIGZ1bmN0aW9uLgoKYGBge3J9CnZhcigxOjEwKQpgYGAKCg==</div>
 
 
 
