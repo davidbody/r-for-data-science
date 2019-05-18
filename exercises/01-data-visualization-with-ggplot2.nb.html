@@ -1772,8 +1772,9 @@ $(document).ready(function () {
 <p>First load the <code>tidyverse</code> set of packages.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeSh0aWR5dmVyc2UpXG5gYGAifQ== -->
-<pre class="r"><code>library(tidyverse)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubGlicmFyeSh0aWR5dmVyc2UpXG5gYGBcbmBgYCJ9 -->
+<p><code>r</code>r library(tidyverse)</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -1783,28 +1784,24 @@ $(document).ready(function () {
 <p>How many rows are in <code>mpg</code>? How many columns?</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RyKG1wZylcbmBgYCJ9 -->
-<pre class="r"><code>str(mpg)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuc3RyKG1wZylcbmBgYFxuYGBgIn0= -->
+<p><code>r</code>r str(mpg)</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>What does the <code>drv</code> variable desribe? Read the help for <code>?mpg</code> to find out.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuP21wZ1xuYGBgIn0= -->
-<pre class="r"><code>?mpg</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuP21wZ1xuYGBgXG5gYGAifQ== -->
+<p><code>r</code>r ?mpg</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>For reference here is the basic <code>ggplot2</code> template:</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjpbImdncGxvdChkYXRhID0gPERBVEE+KSArICIsIiAgPEdFT01fRlVOQ1RJT04+KG1hcHBpbmcgPSBhZXMoPE1BUFBJTkdTPikpIl19 -->
-<pre class="r"><code>ggplot(data = &lt;DATA&gt;) + 
+<pre><code>ggplot(data = &lt;DATA&gt;) + 
   &lt;GEOM_FUNCTION&gt;(mapping = aes(&lt;MAPPINGS&gt;))</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
 <p>Use this template and the <code>mpg</code> dataset to plot <code>displ</code> vs <code>hwy</code>. Hint: Use the <code>geom_point</code> function.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
@@ -1813,8 +1810,9 @@ $(document).ready(function () {
 <p>What do you think will happen when you run the following code?</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ2dwbG90KGRhdGEgPSBtcGcpXG5gYGAifQ== -->
-<pre class="r"><code>ggplot(data = mpg)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuZ2dwbG90KGRhdGEgPSBtcGcpXG5gYGBcbmBgYCJ9 -->
+<p><code>r</code>r ggplot(data = mpg)</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -1834,9 +1832,9 @@ $(document).ready(function () {
 <p>What’s wrong with the following code? Why are the points not blue?</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ2dwbG90KGRhdGEgPSBtcGcpICtcbiAgZ2VvbV9wb2ludChtYXBwaW5nID0gYWVzKHggPSBkaXNwbCwgeSA9IGh3eSwgY29sb3IgPSBcImJsdWVcIikpXG5gYGAifQ== -->
-<pre class="r"><code>ggplot(data = mpg) +
-  geom_point(mapping = aes(x = displ, y = hwy, color = &quot;blue&quot;))</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuZ2dwbG90KGRhdGEgPSBtcGcpICtcbiAgZ2VvbV9wb2ludChtYXBwaW5nID0gYWVzKHggPSBkaXNwbCwgeSA9IGh3eSwgY29sb3IgPSBcXGJsdWVcXCkpXG5gYGBcbmBgYCJ9 -->
+<p><code>r</code>r ggplot(data = mpg) + geom_point(mapping = aes(x = displ, y = hwy, color = ))</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -1857,7 +1855,7 @@ $(document).ready(function () {
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiRXhlcmNpc2UgMSIKb3V0cHV0OiBodG1sX25vdGVib29rCmVkaXRvcl9vcHRpb25zOiAKICBjaHVua19vdXRwdXRfdHlwZTogaW5saW5lCi0tLQoKIyBEYXRhIHZpc3VhbGl6YXRpb24gd2l0aCBnZ3Bsb3QyCgpGaXJzdCBsb2FkIHRoZSBgdGlkeXZlcnNlYCBzZXQgb2YgcGFja2FnZXMuCgpgYGB7cn0KbGlicmFyeSh0aWR5dmVyc2UpCmBgYAoKIyMgRmlyc3Qgc3RlcHMKCkxldCdzIHVzZSB0aGUgYG1wZ2AgZGF0YXNldCBmb3IgdGhlIG5leHQgZmV3IGV4ZXJjaXNlcy4KCkhvdyBtYW55IHJvd3MgYXJlIGluIGBtcGdgPyBIb3cgbWFueSBjb2x1bW5zPwoKYGBge3J9CnN0cihtcGcpCmBgYAoKV2hhdCBkb2VzIHRoZSBgZHJ2YCB2YXJpYWJsZSBkZXNyaWJlPyBSZWFkIHRoZSBoZWxwIGZvciBgP21wZ2AgdG8gZmluZCBvdXQuCgpgYGB7cn0KP21wZwpgYGAKCkZvciByZWZlcmVuY2UgaGVyZSBpcyB0aGUgYmFzaWMgYGdncGxvdDJgIHRlbXBsYXRlOgoKYGBge3IsIGV2YWw9RkFMU0V9CmdncGxvdChkYXRhID0gPERBVEE+KSArIAogIDxHRU9NX0ZVTkNUSU9OPihtYXBwaW5nID0gYWVzKDxNQVBQSU5HUz4pKQpgYGAKClVzZSB0aGlzIHRlbXBsYXRlIGFuZCB0aGUgYG1wZ2AgZGF0YXNldCB0byBwbG90IGBkaXNwbGAgdnMgYGh3eWAuIEhpbnQ6IFVzZSB0aGUgYGdlb21fcG9pbnRgIGZ1bmN0aW9uLgoKYGBge3J9CgpgYGAKCldoYXQgZG8geW91IHRoaW5rIHdpbGwgaGFwcGVuIHdoZW4geW91IHJ1biB0aGUgZm9sbG93aW5nIGNvZGU/CgpgYGB7cn0KZ2dwbG90KGRhdGEgPSBtcGcpCmBgYAoKTWFrZSBhIHNjYXR0ZXJwbG90IG9mIGBod3lgIHZzIGBjeWxgLiBOb3RlIHRoYXQgYGN5bGAgdGFrZXMgb24gb25seSBkaXNjcmV0ZSBpbnRlZ2VyIHZhbHVlcy4KCmBgYHtyfQoKYGBgCgpXaGF0IGhhcHBlbnMgaWYgeW91IG1ha2UgYSBzY2F0dGVycGxvdCBvZiBgY2xhc3NgIHZzIGBkcnZgPyBXaHkgaXMgdGhlIHBsb3Qgbm90IHVzZWZ1bD8KCmBgYHtyfQoKYGBgCgojIyBBZXN0aGV0aWMgbWFwcGluZ3MKCldoYXQncyB3cm9uZyB3aXRoIHRoZSBmb2xsb3dpbmcgY29kZT8gV2h5IGFyZSB0aGUgcG9pbnRzIG5vdCBibHVlPwoKYGBge3J9CmdncGxvdChkYXRhID0gbXBnKSArCiAgZ2VvbV9wb2ludChtYXBwaW5nID0gYWVzKHggPSBkaXNwbCwgeSA9IGh3eSwgY29sb3IgPSAiYmx1ZSIpKQpgYGAKCkNvcHkgdGhlIGNvZGUgYWJvdmUgdG8gdGhlIGZvbGxvd2luZyBjaHVuay4gQ2FuIHlvdSBmaXggaXQ/CgpgYGB7cn0KCmBgYAoKV2hpY2ggdmFyaWFibGVzIGluIGBtcGdgIGFyZSBjYXRlZ29yaWNhbD8gV2hpY2ggdmFyaWFibGVzIGFyZSBjb250aW51b3VzPyAoSGludDogVHlwZSBgP21wZ2AgdG8gcmVhZCB0aGUgZG9jdW1lbnRhdGlvbiBmb3IgdGhlIGRhdGFzZXQuKQoKYGBge3J9CgpgYGAKCk1hcCBhIGNvbnRpbm91cyB2YXJpYWJsZSB0byBgY29sb3JgLCBgc2l6ZWAsIGFuZCBgc2hhcGVgLiBIb3cgZG8gdGhlc2UgYWVzdGhldGljcyBiZWhhdmUgZGlmZmVyZW50bHkgZm9yIGNhdGVnb3JpY2FsIHZlcnN1cyBjb250aW51b3VzIHZhcmlhYmxlcz8KCmBgYHtyfQoKYGBg</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiRXhlcmNpc2UgMSIKb3V0cHV0OiBodG1sX25vdGVib29rCmVkaXRvcl9vcHRpb25zOiAKICBjaHVua19vdXRwdXRfdHlwZTogaW5saW5lCi0tLQoKIyBEYXRhIHZpc3VhbGl6YXRpb24gd2l0aCBnZ3Bsb3QyCgpGaXJzdCBsb2FkIHRoZSBgdGlkeXZlcnNlYCBzZXQgb2YgcGFja2FnZXMuCgpgYGB7cn0KbGlicmFyeSh0aWR5dmVyc2UpCmBgYAoKIyMgRmlyc3Qgc3RlcHMKCkxldCdzIHVzZSB0aGUgYG1wZ2AgZGF0YXNldCBmb3IgdGhlIG5leHQgZmV3IGV4ZXJjaXNlcy4KCkhvdyBtYW55IHJvd3MgYXJlIGluIGBtcGdgPyBIb3cgbWFueSBjb2x1bW5zPwoKYGBge3J9CnN0cihtcGcpCmBgYAoKV2hhdCBkb2VzIHRoZSBgZHJ2YCB2YXJpYWJsZSBkZXNyaWJlPyBSZWFkIHRoZSBoZWxwIGZvciBgP21wZ2AgdG8gZmluZCBvdXQuCgpgYGB7cn0KP21wZwpgYGAKCkZvciByZWZlcmVuY2UgaGVyZSBpcyB0aGUgYmFzaWMgYGdncGxvdDJgIHRlbXBsYXRlOgoKYGBgCmdncGxvdChkYXRhID0gPERBVEE+KSArIAogIDxHRU9NX0ZVTkNUSU9OPihtYXBwaW5nID0gYWVzKDxNQVBQSU5HUz4pKQpgYGAKClVzZSB0aGlzIHRlbXBsYXRlIGFuZCB0aGUgYG1wZ2AgZGF0YXNldCB0byBwbG90IGBkaXNwbGAgdnMgYGh3eWAuIEhpbnQ6IFVzZSB0aGUgYGdlb21fcG9pbnRgIGZ1bmN0aW9uLgoKYGBge3J9CgpgYGAKCldoYXQgZG8geW91IHRoaW5rIHdpbGwgaGFwcGVuIHdoZW4geW91IHJ1biB0aGUgZm9sbG93aW5nIGNvZGU/CgpgYGB7cn0KZ2dwbG90KGRhdGEgPSBtcGcpCmBgYAoKTWFrZSBhIHNjYXR0ZXJwbG90IG9mIGBod3lgIHZzIGBjeWxgLiBOb3RlIHRoYXQgYGN5bGAgdGFrZXMgb24gb25seSBkaXNjcmV0ZSBpbnRlZ2VyIHZhbHVlcy4KCmBgYHtyfQoKYGBgCgpXaGF0IGhhcHBlbnMgaWYgeW91IG1ha2UgYSBzY2F0dGVycGxvdCBvZiBgY2xhc3NgIHZzIGBkcnZgPyBXaHkgaXMgdGhlIHBsb3Qgbm90IHVzZWZ1bD8KCmBgYHtyfQoKYGBgCgojIyBBZXN0aGV0aWMgbWFwcGluZ3MKCldoYXQncyB3cm9uZyB3aXRoIHRoZSBmb2xsb3dpbmcgY29kZT8gV2h5IGFyZSB0aGUgcG9pbnRzIG5vdCBibHVlPwoKYGBge3J9CmdncGxvdChkYXRhID0gbXBnKSArCiAgZ2VvbV9wb2ludChtYXBwaW5nID0gYWVzKHggPSBkaXNwbCwgeSA9IGh3eSwgY29sb3IgPSAiYmx1ZSIpKQpgYGAKCkNvcHkgdGhlIGNvZGUgYWJvdmUgdG8gdGhlIGZvbGxvd2luZyBjaHVuay4gQ2FuIHlvdSBmaXggaXQ/CgpgYGB7cn0KCmBgYAoKV2hpY2ggdmFyaWFibGVzIGluIGBtcGdgIGFyZSBjYXRlZ29yaWNhbD8gV2hpY2ggdmFyaWFibGVzIGFyZSBjb250aW51b3VzPyAoSGludDogVHlwZSBgP21wZ2AgdG8gcmVhZCB0aGUgZG9jdW1lbnRhdGlvbiBmb3IgdGhlIGRhdGFzZXQuKQoKYGBge3J9CgpgYGAKCk1hcCBhIGNvbnRpbm91cyB2YXJpYWJsZSB0byBgY29sb3JgLCBgc2l6ZWAsIGFuZCBgc2hhcGVgLiBIb3cgZG8gdGhlc2UgYWVzdGhldGljcyBiZWhhdmUgZGlmZmVyZW50bHkgZm9yIGNhdGVnb3JpY2FsIHZlcnN1cyBjb250aW51b3VzIHZhcmlhYmxlcz8KCmBgYHtyfQoKYGBg</div>
 
 
 
