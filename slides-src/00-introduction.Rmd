@@ -124,6 +124,8 @@ class:left
 ---
 class: center
 
+[https://r4ds.had.co.nz/](https://r4ds.had.co.nz/)
+
 ![:scale 50%](assets/r4ds-cover.png)
 
 ---
