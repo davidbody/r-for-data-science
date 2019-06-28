@@ -29,7 +29,7 @@ What does the `drv` variable desribe? Read the help for `?mpg` to find out.
 ?mpg
 ```
 
-For reference here is the basic `ggplot2` template:
+For reference here is the basic `ggplot2` template. (Don't try to run this chunk. It's not valid R code.)
 
 ```
 ggplot(data = <DATA>) + 
