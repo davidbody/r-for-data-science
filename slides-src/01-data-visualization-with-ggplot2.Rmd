@@ -207,6 +207,24 @@ ggplot(data = <DATA>, mapping = aes(<MAPPINGS>)) +
 ---
 class: left
 
+# Facets are subplots
+
+For example,
+
+```{r ggplot2, message=TRUE, warning=TRUE, include=FALSE}
+library(ggplot2)
+```
+
+```{r fig.height=5, fig.width=9}
+ggplot(data = mpg, mapping = aes(displ, hwy)) +
+  geom_point() +
+  facet_wrap(vars(class), nrow = 2)
+```
+
+
+---
+class: left
+
 # Some named graphs and their geoms
 
 Name | Geom

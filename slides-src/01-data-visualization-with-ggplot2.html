@@ -14,7 +14,7 @@ class: middle, center, title-slide
 
 # Data Visualization with ggplot2
 ### R for Data Science workshop
-### 2019-05-01 (updated: 2019-05-16)
+### 2019-05-01 (updated: 2019-06-27)
 
 ---
 
@@ -210,6 +210,25 @@ ggplot(data = &lt;DATA&gt;, mapping = aes(&lt;MAPPINGS&gt;)) +
   &lt;COORDINATE_FUNCTION&gt; +
   &lt;FACET_FUNCTION&gt;
 ```
+
+---
+class: left
+
+# Facets are subplots
+
+For example,
+
+
+
+
+```r
+ggplot(data = mpg, mapping = aes(displ, hwy)) +
+  geom_point() +
+  facet_wrap(vars(class), nrow = 2)
+```
+
+![](01-data-visualization-with-ggplot2_files/figure-html/unnamed-chunk-5-1.png)&lt;!-- --&gt;
+
 
 ---
 class: left
