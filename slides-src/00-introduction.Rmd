@@ -138,4 +138,10 @@ class: middle, center
 
 .exercise[your-turn/00-introduction.Rmd]
 
+```{r echo=FALSE}
+library(countdown)
+
+countdown(minutes = 5)
+```
+
 
