@@ -19,6 +19,37 @@ class: left
 options(htmltools.dir.version = FALSE)
 ```
 
+# R for Data Science
+
+## Everyone please do the following now if you haven't already:
+
+### 1. Sign up for a free account at [rstudio.cloud](https://rstudio.cloud/)
+
+### 2. Visit https://tinyurl/????? to join our shared workspace
+
+### 3. Open the r-for-data-science project
+
+### 4. Save a Permanent Copy of the project
+
+---
+class: left
+
+## Your turn
+
+#### Open the `r-for-data-science` project and open the following file:
+
+.exercise[eat-cake-first.R]
+
+---
+class: left
+
+# Welcome
+
+![My name is](assets/hello-my-name-is.jpg)
+
+---
+class: left
+
 # Welcome
 
 Workshop goals
@@ -28,47 +59,6 @@ Workshop goals
 * Learn enough to begin using R for real work
 
 * Overview of what is available
-
----
-class: left
-
-# RStudio Cloud
-
-Everyone should have an RStudio Cloud account.
-
-Everyone should be a member of the shared RStudio Cloud workspace for the workshop.
-
---
-### Your turn
-
-Open the `r-for-data-science` project, open the following file, and follow my instructions:
-
-.exercise[demos/data-visualization-with-ggplot2/eat-cake-first.R]
-
-Credit: [Mine Çetinkaya-Rundel](https://www2.stat.duke.edu/~mc301/)
----
-class: left
-
-# Welcome
-
-![My name is](assets/hello-my-name-is.jpg)
-
----
-class:left
-
-# Welcome
-
-My goals for me
-
-* Practice run for July 17 [KCDC](https://www.kcdc.info/) workshop
-  - Materials
-  - Demos
-  - Exercises
-  - RStudio Cloud
-
-* Can someone please time each section?
-
-* Feedback so I can improve the workshop
 
 * Have fun
 
@@ -113,11 +103,9 @@ class:left
 
 # Logistics
 
-* Thanks to Scott Burklund / Preverity for sponsoring coffee
-
 * Breaks
 
-* Lunch (on your own)
+* Lunch
 
 * Rest rooms
 
@@ -148,4 +136,6 @@ class: middle, center
 ### RStudio Cloud
 ### RMarkdown notebook
 
-.exercise[exercises/00-introduction.Rmd]
+.exercise[your-turn/00-introduction.Rmd]
+
+
