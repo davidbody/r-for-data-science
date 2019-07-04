@@ -21,15 +21,17 @@ options(htmltools.dir.version = FALSE)
 
 # R for Data Science
 
-## Everyone please do the following now if you haven't already:
+### Everyone please do the following now if you haven't already:
 
-### 1. Sign up for a free account at [rstudio.cloud](https://rstudio.cloud/)
+1. Sign up for a free account at [rstudio.cloud](https://rstudio.cloud/)
 
-### 2. Visit https://tinyurl/????? to join our shared workspace
+2. Visit https://tinyurl/????? to join our shared workspace
 
-### 3. Open the r-for-data-science project
+3. Open the r-for-data-science project
 
-### 4. Save a Permanent Copy of the project
+4. Save a Permanent Copy of the project
+
+![save a permanent copy](assets/forkProject.png)
 
 ---
 class: left
@@ -39,6 +41,23 @@ class: left
 #### Open the `r-for-data-science` project and open the following file:
 
 .exercise[eat-cake-first.R]
+
+![source button](assets/source-button.png)
+
+Source the file by clicking the "Source" button at the top right of the editor pane.
+
+> Note: In RStudio, "Run" executes the current line or selection, while "Source" executes the contents of the whole file.
+
+--
+
+Try changing one or both of the countries to any of the following: 
+
+```
+Australia, Austria, Belgium, Canada, Czech Republic, Denmark, Estonia,
+Finland, France, Germany, Greece, Hungary, Iceland, Ireland, Israel,
+Italy, Luxembourg, Netherlands, Norway, Poland, Slovakia, Slovenia,
+Spain, Sweden, Switzerland, United Kingdom, United States
+```
 
 ---
 class: left
