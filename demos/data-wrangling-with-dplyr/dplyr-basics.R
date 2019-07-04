@@ -5,10 +5,10 @@ flights
 
 # Filter rows with filter()
 
-filter(flights, month == 1, day == 1)
+filter(flights, month == 7, day == 17)
 
-jan1 <- filter(flights, month == 1, day == 1)
-View(jan1)
+jul17 <- filter(flights, month == 7, day == 17)
+View(jul17)
 
 filter(flights, month == 11 | month == 12)
 
@@ -46,10 +46,11 @@ flights_sml <- select(flights,
                       distance,
                       air_time
                       )
+flights_sml
 
 mutate(flights_sml,
        gain = dep_delay - arr_delay,
-       speed = distance / air_time * 60)
+       speed = (distance / air_time) * 60)
 
 # Many operators and functions can be used, as long as they operate on vectors
 
