@@ -48,7 +48,7 @@ What do you think will happen when you run the following code?
 ggplot(data = mpg)
 ```
 
-Make a scatterplot of `hwy` vs `cyl`. Note that `cyl` takes on only discrete integer values.
+Make a scatterplot of `cyl` vs `hwy`. Note that `cyl` takes on only discrete integer values.
 
 ```{r}
 
