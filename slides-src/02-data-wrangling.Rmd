@@ -193,6 +193,16 @@ class: left
 
 ### Pipe operator %>%
 
+<div style="margin-top: -20px">
+<ul>
+  <li><code>x %>% f</code> is equivalent to <code>f(x)</code></li>
+  <li><code>x %>% f(y)</code> is equivalent to <code>(fx, y)</code></li>
+  <li><code>x %>% f %>% g %>% h</code> is equivalent to <code>h(g(f(x)))</code></li>
+</ul>
+</div>
+
+--
+
 ```{r, eval=FALSE}
 foo_foo <- little_bunny()
 
@@ -206,8 +216,6 @@ foo_foo_3 <- bop(foo_foo_2, on = head)
 compare
 
 ```{r, eval=FALSE}
-library(magrittr)
-
 foo_foo %>%
   hop(through = forest) %>%
   scoop(up = field_mouse) %>%
@@ -216,7 +224,7 @@ foo_foo %>%
 
 --
 
-.demo[Demo]
+.demo[Demos]
 
 ---
 class: left
@@ -244,6 +252,12 @@ class: middle, center
 
 # Your turn
 
-### dplyr
+### Data wrangling with dplyr
 
-.exercise[exercises/02-data-wrangling-with-dplyr.Rmd]
+.exercise[your-turn/02-data-wrangling-with-dplyr.Rmd]
+
+```{r echo=FALSE}
+library(countdown)
+
+countdown(minutes = 15, update_every = 60, warn_when = 180)
+```

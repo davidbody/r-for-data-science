@@ -6,6 +6,8 @@
     <meta name="author" content="R for Data Science workshop" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+    <link href="libs/countdown/countdown.css" rel="stylesheet" />
+    <script src="libs/countdown/countdown.js"></script>
     <link rel="stylesheet" href="styles.css" type="text/css" />
   </head>
   <body>
@@ -14,7 +16,7 @@ class: middle, center, title-slide
 
 # Data wrangling with dplyr and tidyr
 ### R for Data Science workshop
-### 2019-05-01 (updated: 2019-05-15)
+### 2019-05-01 (updated: 2019-07-04)
 
 ---
 
@@ -247,6 +249,16 @@ class: left
 
 ### Pipe operator %&gt;%
 
+&lt;div style="margin-top: -20px"&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;x %&gt;% f&lt;/code&gt; is equivalent to &lt;code&gt;f(x)&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;x %&gt;% f(y)&lt;/code&gt; is equivalent to &lt;code&gt;(fx, y)&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;x %&gt;% f %&gt;% g %&gt;% h&lt;/code&gt; is equivalent to &lt;code&gt;h(g(f(x)))&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+--
+
 
 ```r
 foo_foo &lt;- little_bunny()
@@ -262,8 +274,6 @@ compare
 
 
 ```r
-library(magrittr)
-
 foo_foo %&gt;%
   hop(through = forest) %&gt;%
   scoop(up = field_mouse) %&gt;%
@@ -272,7 +282,7 @@ foo_foo %&gt;%
 
 --
 
-.demo[Demo]
+.demo[Demos]
 
 ---
 class: left
@@ -300,9 +310,13 @@ class: middle, center
 
 # Your turn
 
-### dplyr
+### Data wrangling with dplyr
 
-.exercise[exercises/02-data-wrangling-with-dplyr.Rmd]
+.exercise[your-turn/02-data-wrangling-with-dplyr.Rmd]
+
+<div class="countdown blink-colon noupdate-60" id="timer_5d1e817b" style="right:0;bottom:0;" data-warnwhen="180">
+<code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
