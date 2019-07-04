@@ -247,9 +247,9 @@ class: middle, center
 
 # Your turn
 
-### ggplot2
+### Data visualization with ggplot2
 
-.exercise[exercises/01-data-visualization-with-ggplot2.Rmd]
+.exercise[your-turn/01-data-visualization-with-ggplot2.Rmd]
 
 ```{r echo=FALSE}
 library(countdown)
