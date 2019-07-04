@@ -10,8 +10,6 @@ p + geom_jitter()
 
 p + geom_boxplot()
 
-p + geom_violin()
-
 # Histograms and frequency polygons
 
 p <- ggplot(mpg, aes(hwy))

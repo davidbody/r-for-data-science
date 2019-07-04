@@ -2,17 +2,14 @@ library(ggplot2)
 
 mpg
 
-ggplot() +
-  geom_point(data = mpg,
-             mapping = aes(x = displ, y = hwy))
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x = displ, y = hwy))
 
-p <- ggplot() +
-  geom_point(data = mpg,
-             mapping = aes(x = displ, y = hwy))
+p <- ggplot(data = mpg) +
+  geom_point(mapping = aes(x = displ, y = hwy))
 p
 
-p + geom_smooth(data = mpg,
-                mapping = aes(x = displ, y = hwy))
+p + geom_smooth(mapping = aes(x = displ, y = hwy))
 
 ggplot(data = mpg,
        mapping = aes(x = displ, y = hwy)) +
