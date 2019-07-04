@@ -6,6 +6,8 @@
     <meta name="author" content="R for Data Science workshop" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+    <link href="libs/countdown/countdown.css" rel="stylesheet" />
+    <script src="libs/countdown/countdown.js"></script>
     <link rel="stylesheet" href="styles.css" type="text/css" />
   </head>
   <body>
@@ -14,13 +16,44 @@ class: middle, center, title-slide
 
 # R for Data Science
 ### R for Data Science workshop
-### 2019-05-01 (updated: 2019-05-18)
+### 2019-05-01 (updated: 2019-07-03)
 
 ---
 
 class: left
 
 
+
+# R for Data Science
+
+## Everyone please do the following now if you haven't already:
+
+### 1. Sign up for a free account at [rstudio.cloud](https://rstudio.cloud/)
+
+### 2. Visit https://tinyurl/????? to join our shared workspace
+
+### 3. Open the r-for-data-science project
+
+### 4. Save a Permanent Copy of the project
+
+---
+class: left
+
+## Your turn
+
+#### Open the `r-for-data-science` project and open the following file:
+
+.exercise[eat-cake-first.R]
+
+---
+class: left
+
+# Welcome
+
+![My name is](assets/hello-my-name-is.jpg)
+
+---
+class: left
 
 # Welcome
 
@@ -31,47 +64,6 @@ Workshop goals
 * Learn enough to begin using R for real work
 
 * Overview of what is available
-
----
-class: left
-
-# RStudio Cloud
-
-Everyone should have an RStudio Cloud account.
-
-Everyone should be a member of the shared RStudio Cloud workspace for the workshop.
-
---
-### Your turn
-
-Open the `r-for-data-science` project, open the following file, and follow my instructions:
-
-.exercise[demos/data-visualization-with-ggplot2/eat-cake-first.R]
-
-Credit: [Mine Çetinkaya-Rundel](https://www2.stat.duke.edu/~mc301/)
----
-class: left
-
-# Welcome
-
-![My name is](assets/hello-my-name-is.jpg)
-
----
-class:left
-
-# Welcome
-
-My goals for me
-
-* Practice run for July 17 [KCDC](https://www.kcdc.info/) workshop
-  - Materials
-  - Demos
-  - Exercises
-  - RStudio Cloud
-
-* Can someone please time each section?
-
-* Feedback so I can improve the workshop
 
 * Have fun
 
@@ -116,11 +108,9 @@ class:left
 
 # Logistics
 
-* Thanks to Scott Burklund / Preverity for sponsoring coffee
-
 * Breaks
 
-* Lunch (on your own)
+* Lunch
 
 * Rest rooms
 
@@ -144,6 +134,94 @@ Image source: &lt;a href="http://r4ds.had.co.nz/"&gt;R for Data Science&lt;/a&gt
 &lt;/p&gt;
 
 ---
+class: left
+
+# R, RStudio, &amp; RStudio Cloud
+
+### .highlight[R] is a language
+
+### .highlight[RStudio] is an IDE (also a company)
+
+### .highlight[RStudio Cloud] is RStudio (the IDE) hosted by RStudio (the company)
+
+---
+class: left
+
+# What is R?
+
+From the official R website:
+
+&gt; R is a .highlight[free software environment] for .highlight[statistical computing] and .highlight[graphics]. It compiles and runs on a wide variety of .highlight[UNIX] platforms, .highlight[Windows] and .highlight[MacOS].
+
+--
+
+- general purpose programming language
+
+--
+
+- large standard library with strong support for
+ + data wrangling
+ + data analysis &amp; statistical computations
+ + plotting and data visualization
+
+--
+
+- large number of contributed libraries
+
+--
+
+- written in R, C++, and Fortran
+
+--
+
+- conceived in 1992 as an open source replacement for the S language. Initial release in 1995, version 1.0 in 2000, version 3.5 in 2018
+
+---
+class: left
+
+# RStudio IDE
+
+- Free and open source integerated development environment for R
+
+--
+
+- RStudio Desktop (Windows, MacOS, Linux)
+
+- RStudio Server (via browser)
+
+--
+
+- RStudio Cloud (hosted by RStudio, the company)
+
+---
+class: left
+
+# RStudio (the company)
+
+- Founded by J.J. Allaire (creator of Cold Fusion)
+
+--
+
+- Chief Scientist is Hadley Wickham
+
+--
+
+- RStudio has contributed to many packages, including
+
+  - Tidyverse - R packages for data science
+  - Shiny - web framework for R
+  - RMarkdown - combine R code with markdown
+  - knitr - generate dynamic reports
+  - packrat - dependency management
+  - devtools - package development tools
+
+--
+
+- rstudio::conf January 27-30, 2020, San Francisco
+
+  Session videos for past conferences are available at rstudio.com
+
+---
 class: middle, center
 
 # Your turn
@@ -151,7 +229,11 @@ class: middle, center
 ### RStudio Cloud
 ### RMarkdown notebook
 
-.exercise[exercises/00-introduction.Rmd]
+.exercise[your-turn/00-introduction.Rmd]
+
+<div class="countdown" id="timer_5d1d54d6" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

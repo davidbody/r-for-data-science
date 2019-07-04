@@ -129,6 +129,94 @@ Image source: <a href="http://r4ds.had.co.nz/">R for Data Science</a> by Hadley 
 </p>
 
 ---
+class: left
+
+# R, RStudio, & RStudio Cloud
+
+### .highlight[R] is a language
+
+### .highlight[RStudio] is an IDE (also a company)
+
+### .highlight[RStudio Cloud] is RStudio (the IDE) hosted by RStudio (the company)
+
+---
+class: left
+
+# What is R?
+
+From the official R website:
+
+> R is a .highlight[free software environment] for .highlight[statistical computing] and .highlight[graphics]. It compiles and runs on a wide variety of .highlight[UNIX] platforms, .highlight[Windows] and .highlight[MacOS].
+
+--
+
+- general purpose programming language
+
+--
+
+- large standard library with strong support for
+ + data wrangling
+ + data analysis & statistical computations
+ + plotting and data visualization
+
+--
+
+- large number of contributed libraries
+
+--
+
+- written in R, C++, and Fortran
+
+--
+
+- conceived in 1992 as an open source replacement for the S language. Initial release in 1995, version 1.0 in 2000, version 3.5 in 2018
+
+---
+class: left
+
+# RStudio IDE
+
+- Free and open source integerated development environment for R
+
+--
+
+- RStudio Desktop (Windows, MacOS, Linux)
+
+- RStudio Server (via browser)
+
+--
+
+- RStudio Cloud (hosted by RStudio, the company)
+
+---
+class: left
+
+# RStudio (the company)
+
+- Founded by J.J. Allaire (creator of Cold Fusion)
+
+--
+
+- Chief Scientist is Hadley Wickham
+
+--
+
+- RStudio has contributed to many packages, including
+
+  - Tidyverse - R packages for data science
+  - Shiny - web framework for R
+  - RMarkdown - combine R code with markdown
+  - knitr - generate dynamic reports
+  - packrat - dependency management
+  - devtools - package development tools
+
+--
+
+- rstudio::conf January 27-30, 2020, San Francisco
+
+  Session videos for past conferences are available at rstudio.com
+
+---
 class: middle, center
 
 # Your turn
