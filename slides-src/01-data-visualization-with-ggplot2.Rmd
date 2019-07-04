@@ -250,3 +250,9 @@ class: middle, center
 ### ggplot2
 
 .exercise[exercises/01-data-visualization-with-ggplot2.Rmd]
+
+```{r echo=FALSE}
+library(countdown)
+
+countdown(minutes = 15, update_every = 60, warn_when = 180)
+```
