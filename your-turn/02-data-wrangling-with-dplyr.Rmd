@@ -7,11 +7,13 @@ editor_options:
 
 # Data wrangling with dplyr
 
-First load the `nycflights13` and `tidyverse` packages.
+First load the `nycflights13` and `tidyverse` packages, and the flights data set.
 
 ```{r}
 library(nycflights13)
 library(tidyverse)
+
+data(flights)
 ```
 
 ## Find all flights that
@@ -42,37 +44,31 @@ Arrived more than two hours late but didn't leave late.
 
 ## Grouped summaries
 
-Which carrier has the worst average arrival delay?
+Which carrier had the worst average arrival delay?
 
 ```{r}
 
 ```
 
-## Add and compare variables [HARD]
+## Compute and compare variables [HARD]
 
-Compare `air_time` with `arr_time - dep_time`. What do you expect to see? What do you see? What do you need to do to fix it?
+Compare `dep_time`, `sched_dep_time`, and `dep_delay`. Are they consistent? Explain your findings. [HARD]
 
-Hint: You might find the following function useful:
+You might find the following function helpful:
 
 ```{r}
-# converts times in HHMM or HMM format to minutes since midnight
-time2mins <- function(x) {
-  (x %/% 100 * 60 + x %% 100) %% (60 * 24)
+# Converts times in HHMM or HMM formats to minutes since midnight.
+# Midnight is represented as 2400, which is 1440 minutes, so we also convert 1440 to 0.
+time2mins = function(x) {
+  (x %/% 100 * 60 + x %% 100) %% 1440
 }
-```
 
-For example, an `arr_time` of 1754 is 1074 minutes after midnight.
-
-```{r}
-arr_time <- 1754
-time2mins(arr_time)
+# %/% indicates integer division: 5 %/% 3 evaluates to 1
+# %% indicates modulo or remainder: 5 %% 3 evaluates to 2
 ```
 
 ```{r}
 
 ```
 
-Hint: Think about flights that depart before midnight and arrive after midnight.
-
-Hint: What about flights with destinations in other time zones?
-
+Hint: think about flights that were scheduled to depart before midnight, but actually departed after midnight.
