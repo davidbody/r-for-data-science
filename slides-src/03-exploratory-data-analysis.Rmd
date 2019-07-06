@@ -140,4 +140,4 @@ class: middle, center
 
 ### Exploratory Data Analysis
 
-.exercise[exercises/03-exploratory-data-analysis.Rmd]
+.exercise[your-turn/03-exploratory-data-analysis.Rmd]

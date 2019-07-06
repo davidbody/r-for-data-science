@@ -6,7 +6,9 @@ head(anscombe)
 anscombe %>%
   summarize_all(c("mean", "sd"))
 
-round(map_dbl(anscombe, mean), digits = 2)
+anscombe %>%
+  map_dbl(mean) %>%
+  round(digits = 2)
 
 anscombe %>%
   map_dbl(sd) %>%
