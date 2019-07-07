@@ -141,3 +141,9 @@ class: middle, center
 ### Exploratory Data Analysis
 
 .exercise[your-turn/03-exploratory-data-analysis.Rmd]
+
+```{r echo=FALSE}
+library(countdown)
+
+countdown(minutes = 15, update_every = 60, warn_when = 180)
+```
