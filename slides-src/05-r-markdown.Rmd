@@ -187,5 +187,9 @@ class: center
 
 * Knit it by using the appropriate keyboard short cut.
 
-* Verify that you can modify the input and see the output update.
+* Using the R Markdown quick reference:
+
+  * Figure out how to add a horizontal rule.
+
+  * Figure out how to add a blockquote.
 ]
