@@ -236,6 +236,17 @@ class: left
   Session videos for past conferences are available at rstudio.com
 
 ---
+class: left
+
+### One more thing
+
+In RStudio Cloud, please go to Tools | Global Options... | General | Workspace and *uncheck* "Restore .RData into workspace at startup" and change "Save workspace to .RData on exit" to *Never*.
+
+
+![global options](assets/global-options.png)
+
+
+---
 class: middle, center
 
 # Your turn
