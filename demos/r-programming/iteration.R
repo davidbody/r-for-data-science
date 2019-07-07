@@ -6,7 +6,7 @@ x_sum <- 0
 for(i in seq_along(x)) {
   x_sum <- x_sum + x[i]
 }
-
+x_sum
 
 # Map functions
 

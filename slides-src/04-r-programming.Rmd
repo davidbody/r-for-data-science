@@ -104,9 +104,15 @@ class: left
 
 - Functions are for humans and computers
 
+--
+
+#### Not covered today
+
 - Conditional execution
 
 - Function arguments and return values
+
+- much more
 
 --
 .demo[Demos]
@@ -132,4 +138,10 @@ class: middle, center
 
 ### R Programming
 
-.exercise[exercises/04-r-programming.Rmd]
+.exercise[your-turn/04-r-programming.Rmd]
+
+```{r echo=FALSE}
+library(countdown)
+
+countdown(minutes = 15, update_every = 60, warn_when = 180)
+```

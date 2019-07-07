@@ -1,8 +1,10 @@
 # Atomic vectors
 
 x <- c(1, 2, 3, 4, 5)
+x
 
 y <- c("abc", "def", "ghi")
+y
 
 typeof(x)
 length(x)
@@ -46,7 +48,8 @@ pryr::object_size(y)
 
 # Using atomic vectors
 
-x <- runif(1000)
+x <- runif(100)
+x
 
 x * 2
 
@@ -61,8 +64,9 @@ table(x)
 # All types of vectors can be named
 
 x_named <- c(x = 1, y = 2, z = 4)
+x_named
 names(x_named)
-names(x_named)[2] = "new name"
+names(x_named)[2] <- "new name"
 names(x_named)
 x_named
 
@@ -129,14 +133,29 @@ attr(x, "greeting")
 attr(x, "greeting") = "Hi"
 attr(x, "farewell") = "Bye"
 attributes(x)
+x
 
 # A special attribute "class" controls how generic methods work
+
+# R's first and simplest OO system: S3
 
 as.Date
 methods(as.Date)
 
-getS3method("as.Date", "default")
-getS3method("as.Date", "character")
+some_days <- as.Date("2019-07-17") + sample(10, 5)
+some_days
+mean(some_days)
+str(some_days)
+
+# both mean and str are generic methods
+
+attributes(some_days)
+unclass(some_days)
+mean(unclass(some_days))
+str(unclass(some_days))
+
+methods(mean)
+methods(str)
 
 methods(print)
 methods(`[`)
@@ -154,10 +173,17 @@ methods(`$`)
 # Dates
 # Tibbles
 
+# We'll look at two
+
+# Factors
+
 x <- factor(c("ab", "cd", "ab"), levels = c("ab", "cd", "ef"))
 typeof(x)
 attributes(x)
 x
+
+# Tibbles
+library(tibble)
 
 tb <- tibble(x = 1:5, y = 5:1)
 typeof(tb)
