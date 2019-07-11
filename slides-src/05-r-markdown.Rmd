@@ -193,3 +193,9 @@ class: center
 
   * Figure out how to add a blockquote.
 ]
+
+```{r echo=FALSE}
+library(countdown)
+
+countdown(minutes = 10, update_every = 60, warn_when = 180)
+```
