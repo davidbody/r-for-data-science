@@ -6,9 +6,8 @@ shinyUI(fluidPage(
 
     verticalLayout(
         fluidRow(
-            flowLayout(
-                uiOutput("country_1_selector"),
-                uiOutput("country_2_selector")
+            column(6, uiOutput("country_1_selector")),
+            column(6, uiOutput("country_2_selector"))
             )
         ),
 
@@ -16,4 +15,4 @@ shinyUI(fluidPage(
             plotOutput("income_plot")
         )
     )
-))
+)
