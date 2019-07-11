@@ -13,16 +13,12 @@ output:
       countIncrementalSlides: false
       titleSlideClass: [middle, center]
 ---
-class: center, middle
+class: left
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
 ```
 
-# Thank you!
-
----
-class: left
 # R for Data Science
 
 We covered
@@ -59,4 +55,11 @@ class: center
 
 Read the book for much more.
 
-![:scale 50%](assets/r4ds-cover.png)
+[https://r4ds.had.co.nz/](https://r4ds.had.co.nz/)
+
+![:scale 40%](assets/r4ds-cover.png)
+
+---
+class: center, middle
+
+# Thank You!
