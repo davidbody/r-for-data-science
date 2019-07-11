@@ -66,6 +66,10 @@ class: left
 
 ![My name is](assets/hello-my-name-is.jpg)
 
+Email: davidbody@bigcreek.com
+
+Twitter: [@david_body](https://twitter.com/david_body)
+
 ---
 class: left
 
