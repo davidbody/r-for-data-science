@@ -30,7 +30,7 @@ options(htmltools.dir.version = FALSE)
 
 - File structure
 
-- Publishing your app
+- Deployment
 
 ---
 class: center
@@ -78,6 +78,54 @@ class: left
 - The UI interacts with the R server using websockets
 
 - You only have to write R code
+
+---
+class: center
+
+![](assets/shiny1.png)
+
+A Shiny app consists of a web page served by an R program.
+
+<br/>
+<br/>
+<br/>
+<p style="font-size: x-small">
+Image credit: Mine Çetinkaya-Rundel / RStudio
+</p>
+
+---
+class: center
+
+![](assets/shiny2.png)
+
+During development and when running locally, the R program is running on your computer.
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p style="font-size: x-small">
+Image credit: Mine Çetinkaya-Rundel / RStudio
+</p>
+
+---
+class: center
+
+![](assets/shiny3.png)
+
+When the Shiny app is deployed in production, a web server runs the R program that serves the app.
+
+The R program processes data and generates the UI (HTML, CSS, JavaScript).
+
+The UI (HTML, CSS, JavaScript) runs in the user's web browser.
+
+<br/>
+<br/>
+<br/>
+<p style="font-size: x-small">
+Image credit: Mine Çetinkaya-Rundel / RStudio
+</p>
 
 ---
 class: left
@@ -138,14 +186,25 @@ class: left
 
 # Shiny
 
-## Movies app example
+## Household Income example
 
-From the Intro to Shiny webinar from RStudio
-
-https://resources.rstudio.com/webinars
+Our "eat cake first" demo turned into a Shiny app!
 
 --
 .demo[Demo]
+
+---
+class: left
+
+# Shiny
+
+## Deploying your app
+
+* [Shinyapps.io](https://shinyapps.io) - hosting service from RStudio ($, includes a free tier)
+
+* [Shiny server](https://www.rstudio.com/products/shiny/download-server/) - open source, deploy to your own server or Docker container
+
+* [RStudio Connect](https://www.rstudio.com/products/connect/) - RStudio publishing platform for Shiny apps, RMarkdown reports, Plumber API's, dashboards, and more ($$$)
 
 ---
 class: middle, center
