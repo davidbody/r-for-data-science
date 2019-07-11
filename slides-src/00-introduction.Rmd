@@ -117,7 +117,7 @@ Outline
 
 * R programming
 
-* RMarkdown
+* R Markdown
 
 * Shiny
 
