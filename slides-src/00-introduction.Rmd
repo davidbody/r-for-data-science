@@ -242,6 +242,36 @@ class: left
 ---
 class: left
 
+# Tidyverse
+
+[www.tidyverse.org](https://www.tidyverse.org/)
+
+> The tidyverse opinionated collection of R packages designed for data science. All packages share an underlying design philosophy, grammar, and data structures.
+
+Core tidyverse packages:
+
+* ggplot2
+* dplyr
+* tidyr
+* readr
+* purrr
+* tibble
+* stringr
+* forcats
+
+---
+class: left
+
+# Tidyverse Developer Days
+
+* January 19, 2019 - Austin, TX, USA
+* July 8, 2019 - Toulouse, France
+
+![:scale 40%](assets/tidyverse-dev-day-2.png)
+
+---
+class: left
+
 ### One more thing
 
 In RStudio Cloud, please go to Tools | Global Options... | General | Workspace and *uncheck* "Restore .RData into workspace at startup" and change "Save workspace to .RData on exit" to *Never*.
