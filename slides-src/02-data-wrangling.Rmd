@@ -243,6 +243,8 @@ The `tidyr` packages provides some functions for transforming untidy data into t
 
 The main functions for doing this are .red[gather()] and .red[spread()].
 
+These are in the process of being renamed to pivot_longer() and pivot_wider().
+
 --
 
 .demo[Demo]
