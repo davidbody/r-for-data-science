@@ -12,8 +12,7 @@ household_income_raw <- read_csv("demos/data/real-disposable-household-income-in
 household_income <- 
   household_income_raw %>%
   rename(Country = Entity) %>%
-  gather(Decile, Index, matches("\\d+")) %>%
-  mutate(Country = as_factor(Country), Decile = as_factor(Decile))
+  gather(Decile, Index, matches("\\d+"))
 
 household_income %>%
   filter(Country %in% c("United Kingdom", "United States")) %>%
