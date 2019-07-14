@@ -97,7 +97,7 @@ class: left
 R functions are called like this:
 
 ```{r eval=FALSE}
-function_name(arg1 = val1, arg2 = val2, ...)
+function_name(val1, arg2 = val2, ...)
 ```
 
 * Positional arguments
@@ -106,6 +106,15 @@ function_name(arg1 = val1, arg2 = val2, ...)
 * R functions can optionally take an arbitrary number of values (...)
 * Arguments are lazily evaluated
 * R functions always have a return value, possibly `NULL`
+
+---
+class: left
+
+# dplyr package
+
+Like most Tidyverse packages, dplyr functions operate on .highlight[data frames].
+
+The Tidyverse uses enhanced data frames known as .highlight[tibbles].
 
 ---
 class: left
@@ -140,11 +149,11 @@ class: left
 * arrange
 * group_by
 
-Each function expects a .red[data frame] as it's first argument.
+Each function expects a .red[data frame] as its first argument.
 
 Subsequent arguments describe .red[what to do].
 
-Result is always a .red[new data frame].
+Result is always a .red[new data frame]. (Technically .red[tibble]).
 
 --
 

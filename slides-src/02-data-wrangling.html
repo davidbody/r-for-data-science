@@ -16,7 +16,7 @@ class: middle, center, title-slide
 
 # Data wrangling with dplyr and tidyr
 ### R for Data Science workshop
-### 2019-05-01 (updated: 2019-07-11)
+### 2019-05-01 (updated: 2019-07-14)
 
 ---
 
@@ -110,7 +110,7 @@ R functions are called like this:
 
 
 ```r
-function_name(arg1 = val1, arg2 = val2, ...)
+function_name(val1, arg2 = val2, ...)
 ```
 
 * Positional arguments
@@ -119,6 +119,15 @@ function_name(arg1 = val1, arg2 = val2, ...)
 * R functions can optionally take an arbitrary number of values (...)
 * Arguments are lazily evaluated
 * R functions always have a return value, possibly `NULL`
+
+---
+class: left
+
+# dplyr package
+
+Like most Tidyverse packages, dplyr functions operate on .highlight[data frames].
+
+The Tidyverse uses enhanced data frames known as .highlight[tibbles].
 
 ---
 class: left
@@ -153,11 +162,11 @@ class: left
 * arrange
 * group_by
 
-Each function expects a .red[data frame] as it's first argument.
+Each function expects a .red[data frame] as its first argument.
 
 Subsequent arguments describe .red[what to do].
 
-Result is always a .red[new data frame].
+Result is always a .red[new data frame]. (Technically .red[tibble]).
 
 --
 
@@ -316,7 +325,7 @@ class: middle, center
 
 .exercise[your-turn/02-data-wrangling-with-dplyr.Rmd]
 
-<div class="countdown blink-colon noupdate-60" id="timer_5d27d191" style="right:0;bottom:0;" data-warnwhen="180">
+<div class="countdown blink-colon noupdate-60" id="timer_5d2b5628" style="right:0;bottom:0;" data-warnwhen="180">
 <code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
     </textarea>
