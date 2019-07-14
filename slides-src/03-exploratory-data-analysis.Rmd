@@ -63,6 +63,19 @@ class: center
 Image source: <a href="http://r4ds.had.co.nz/">R for Data Science</a> by Hadley Wickham & Garrett Grolemund.
 </p>
 
+
+---
+class: left
+
+## EDA: Visualization is critical
+
+### Classic example: Anscombe's Quartet
+
+![anscombes-quartet](assets/anscombe.png)
+
+--
+.demo[Demo]
+
 ---
 class: left
 
