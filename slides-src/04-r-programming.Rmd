@@ -26,7 +26,7 @@ options(htmltools.dir.version = FALSE)
 
 - Vectors and lists
 
-- Functions
+- Functions (includes example of LaTeX in R Markdown)
 
 - Iteration with `purrr`
 

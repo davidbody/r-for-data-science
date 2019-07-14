@@ -14,7 +14,7 @@ class: middle, center, title-slide
 
 # Shiny
 ### R for Data Science workshop
-### 2019-05-01 (updated: 2019-07-11)
+### 2019-05-01 (updated: 2019-07-14)
 
 ---
 
@@ -23,6 +23,8 @@ class:left
 
 
 ## Shiny
+
+Note: Shiny is not covered in *R for Data Science*.
 
 ### Outline
 
@@ -142,9 +144,15 @@ class: left
 ```r
 library(shiny)
 
-ui &lt;- fluidPage()
+ui &lt;- fluidPage(
+  ...
+  ...
+)
 
-server &lt;- function(input, output) {}
+server &lt;- function(input, output) {
+  ...
+  ...
+}
 
 shinyApp(ui = ui, server = server)
 ```

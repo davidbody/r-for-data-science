@@ -20,6 +20,8 @@ options(htmltools.dir.version = FALSE)
 
 ## Shiny
 
+Note: Shiny is not covered in *R for Data Science*.
+
 ### Outline
 
 - Overview
@@ -137,9 +139,15 @@ class: left
 ```{r eval=FALSE}
 library(shiny)
 
-ui <- fluidPage()
+ui <- fluidPage(
+  ...
+  ...
+)
 
-server <- function(input, output) {}
+server <- function(input, output) {
+  ...
+  ...
+}
 
 shinyApp(ui = ui, server = server)
 ```

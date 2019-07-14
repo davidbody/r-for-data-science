@@ -13,11 +13,19 @@ output:
       countIncrementalSlides: false
       titleSlideClass: [middle, center]
 ---
-class: left
+class: center, middle
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
 ```
+# R for Data Science
+
+# Thank You!
+
+## And thanks to the KCDC sponsors and organizers!
+
+---
+class: left
 
 # R for Data Science
 
@@ -58,8 +66,3 @@ Read the book for much more.
 [https://r4ds.had.co.nz/](https://r4ds.had.co.nz/)
 
 ![:scale 40%](assets/r4ds-cover.png)
-
----
-class: center, middle
-
-# Thank You!
