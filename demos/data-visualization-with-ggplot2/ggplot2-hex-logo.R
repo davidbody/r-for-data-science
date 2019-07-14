@@ -15,13 +15,13 @@ bg_col <- c("#F2F2F2")
 l_col <- c("#424242")
 p_col <- c("#A8D6FF", "#51A7F9", "#0365C0", "#164F86", "#002452", "#000643")
 
-ggplot(hex, aes(x, y)) +
+ggplot2_hex_logo <- ggplot(hex, aes(x, y)) +
   geom_line(aes(x = lpx, y = lpy), data = line_points, size = 4, color = l_col) +
   geom_point(aes(x = lpx, y = lpy), data = line_points, size = 23, color = p_col) +
   geom_path(size = 10, color = l_col, lineend = "square") +
-  geom_text(aes(x = 0, y = -0.5), label = "ggplot2", size = 33, color = l_col) +
+  geom_text(aes(x = 0, y = -0.5), label = "ggplot2", size = 33, color = l_col, inherit.aes = FALSE) +
   geom_text(aes(x = 0.15, y = -1.45, angle = 30),
-            color = l_col, size = 6, label = "www.rstudio.com") +
+            color = l_col, size = 6, label = "www.rstudio.com", inherit.aes = FALSE) +
   geom_path(aes(x, y), data = hex2, size = 75, color = "white", lineend = "square") +
   coord_cartesian(xlim = c(-0.55, 0.55), ylim = c(-2, 2)) +
   theme(aspect.ratio = 1.2,

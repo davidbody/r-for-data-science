@@ -16,7 +16,7 @@ class: middle, center, title-slide
 
 # Data Visualization with ggplot2
 ### R for Data Science workshop
-### 2019-05-01 (updated: 2019-07-11)
+### 2019-05-01 (updated: 2019-07-13)
 
 ---
 
@@ -28,11 +28,11 @@ class:left
 
 ### Outline
 
+- Overview of ggplot2
+
 - Prerequisites
   - Tidyverse
   - Data frames
-
-- Overview of ggplot2
 
 - Grammar of Graphics
 
@@ -170,6 +170,18 @@ ggplot(data = mpg, mapping = aes(displ, hwy)) +
 
 ![](01-data-visualization-with-ggplot2_files/figure-html/facets-1.png)&lt;!-- --&gt;
 
+---
+class: left
+
+# Grammar of Graphics
+
+We will focus on 3 main elements of the grammar:
+
+* .highlight[Data] (data frame in tidy format)
+
+* Layers of .highlight[geom]etric objects
+
+* Mappings of data values to visual properties (.highlight[aes]thetics) of geoms
 
 ---
 class: left
@@ -179,17 +191,21 @@ class: left
 
 ```r
 ggplot(data = &lt;DATA&gt;) + 
-  &lt;GEOM_FUNCTION&gt;(mapping = aes(&lt;MAPPINGS&gt;))
+  &lt;GEOM_FUNCTION&gt;(mapping = aes(&lt;MAPPINGS&gt;)) +
+  &lt;GEOM_FUNCTION&gt;(mapping = aes(&lt;MAPPINGS&gt;)) +
+  ...
 ```
 
 --
 
-More commonly
+If the geoms use the same aesthetics:
 
 
 ```r
 ggplot(data = &lt;DATA&gt;, mapping = aes(&lt;MAPPINGS&gt;)) + 
-  &lt;GEOM_FUNCTION&gt;()
+  &lt;GEOM_FUNCTION&gt;() +
+  &lt;GEOM_FUNCTION&gt;() +
+  ...
 ```
 
 --
@@ -210,23 +226,14 @@ ggplot(data = &lt;DATA&gt;) +
      position = &lt;POSITION&gt;
   ) +
   &lt;COORDINATE_FUNCTION&gt; +
-  &lt;FACET_FUNCTION&gt;
+  &lt;FACET_FUNCTION&gt; +
+  &lt;SCALE_FUNCTION&gt; +
+  &lt;THEME_FUNCTION&gt;
 ```
 
---
+Required elements: &amp;lt;DATA&amp;gt;, &amp;lt;GEOM_FUNCTION&amp;gt;, &amp;lt;MAPPINGS&amp;gt;
 
-More commonly
-
-
-```r
-ggplot(data = &lt;DATA&gt;, mapping = aes(&lt;MAPPINGS&gt;)) + 
-  &lt;GEOM_FUNCTION&gt;(
-     stat = &lt;STAT&gt;, 
-     position = &lt;POSITION&gt;
-  ) +
-  &lt;COORDINATE_FUNCTION&gt; +
-  &lt;FACET_FUNCTION&gt;
-```
+Other elements have sensible defaults.
 
 ---
 class: left
@@ -253,6 +260,15 @@ ggplot2 is extensible
 ![:scale 40%](assets/geom_brick.png)
 
 ---
+class: left
+
+### You can create almost any 2-dimensional plot with ggplot2
+
+![](01-data-visualization-with-ggplot2_files/figure-html/ggplot2-logo-1.png)&lt;!-- --&gt;
+
+Source code is in demos/data-visualization-with-ggplot2/ggplot2-hex-logo.R
+
+---
 class: middle, center
 
 # Your turn
@@ -261,7 +277,7 @@ class: middle, center
 
 .exercise[your-turn/01-data-visualization-with-ggplot2.Rmd]
 
-<div class="countdown blink-colon noupdate-60" id="timer_5d279cbe" style="right:0;bottom:0;" data-warnwhen="180">
+<div class="countdown blink-colon noupdate-60" id="timer_5d2a74f9" style="right:0;bottom:0;" data-warnwhen="180">
 <code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
     </textarea>

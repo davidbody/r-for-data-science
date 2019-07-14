@@ -23,11 +23,11 @@ options(htmltools.dir.version = FALSE)
 
 ### Outline
 
+- Overview of ggplot2
+
 - Prerequisites
   - Tidyverse
   - Data frames
-
-- Overview of ggplot2
 
 - Grammar of Graphics
 
@@ -164,6 +164,18 @@ ggplot(data = mpg, mapping = aes(displ, hwy)) +
   facet_wrap(vars(class), nrow = 2)
 ```
 
+---
+class: left
+
+# Grammar of Graphics
+
+We will focus on 3 main elements of the grammar:
+
+* .highlight[Data] (data frame in tidy format)
+
+* Layers of .highlight[geom]etric objects
+
+* Mappings of data values to visual properties (.highlight[aes]thetics) of geoms
 
 ---
 class: left
@@ -172,16 +184,20 @@ class: left
 
 ```{r, eval=FALSE}
 ggplot(data = <DATA>) + 
-  <GEOM_FUNCTION>(mapping = aes(<MAPPINGS>))
+  <GEOM_FUNCTION>(mapping = aes(<MAPPINGS>)) +
+  <GEOM_FUNCTION>(mapping = aes(<MAPPINGS>)) +
+  ...
 ```
 
 --
 
-More commonly
+If the geoms use the same aesthetics:
 
 ```{r, eval=FALSE}
 ggplot(data = <DATA>, mapping = aes(<MAPPINGS>)) + 
-  <GEOM_FUNCTION>()
+  <GEOM_FUNCTION>() +
+  <GEOM_FUNCTION>() +
+  ...
 ```
 
 --
@@ -201,22 +217,14 @@ ggplot(data = <DATA>) +
      position = <POSITION>
   ) +
   <COORDINATE_FUNCTION> +
-  <FACET_FUNCTION>
+  <FACET_FUNCTION> +
+  <SCALE_FUNCTION> +
+  <THEME_FUNCTION>
 ```
 
---
+Required elements: &lt;DATA&gt;, &lt;GEOM_FUNCTION&gt;, &lt;MAPPINGS&gt;
 
-More commonly
-
-```{r, eval=FALSE}
-ggplot(data = <DATA>, mapping = aes(<MAPPINGS>)) + 
-  <GEOM_FUNCTION>(
-     stat = <STAT>, 
-     position = <POSITION>
-  ) +
-  <COORDINATE_FUNCTION> +
-  <FACET_FUNCTION>
-```
+Other elements have sensible defaults.
 
 ---
 class: left
@@ -241,6 +249,19 @@ class: center
 ggplot2 is extensible
 
 ![:scale 40%](assets/geom_brick.png)
+
+---
+class: left
+
+### You can create almost any 2-dimensional plot with ggplot2
+
+```{r ggplot2-logo, echo=FALSE, fig.width=9}
+source("../demos/data-visualization-with-ggplot2/ggplot2-hex-logo.R")
+
+ggplot2_hex_logo
+```
+
+Source code is in demos/data-visualization-with-ggplot2/ggplot2-hex-logo.R
 
 ---
 class: middle, center
