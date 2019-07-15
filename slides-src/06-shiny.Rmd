@@ -222,3 +222,8 @@ class: middle, center
 ### Shiny
 
 .exercise[Create a shiny web app!]
+
+```{r echo=FALSE}
+library(countdown)
+countdown(minutes = 20, update_every = 15, warn_when = 120, top = 0, play_sound = TRUE)
+```

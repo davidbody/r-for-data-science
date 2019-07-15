@@ -274,6 +274,5 @@ class: middle, center
 
 ```{r echo=FALSE}
 library(countdown)
-
-countdown(minutes = 15, update_every = 60, warn_when = 180)
+countdown(minutes = 15, update_every = 15, warn_when = 120, top = 0, play_sound = TRUE)
 ```

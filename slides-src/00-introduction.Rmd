@@ -296,8 +296,5 @@ class: middle, center
 
 ```{r echo=FALSE}
 library(countdown)
-
-countdown(minutes = 5)
+countdown(minutes = 5, update_every = 15, warn_when = 120, top = 0, play_sound = TRUE)
 ```
-
-
