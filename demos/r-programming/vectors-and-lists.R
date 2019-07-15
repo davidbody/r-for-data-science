@@ -70,6 +70,14 @@ names(x_named)[2] <- "new name"
 names(x_named)
 x_named
 
+# Some handy ways to generate sequential numeric vectors
+
+x <- 1:10
+x
+
+x <- seq(2, 20, by = 3)
+x
+
 # Subsetting vectors
 
 # We've used dplyr::filter for subsetting, but that doesn't work for vectors or lists
@@ -186,6 +194,6 @@ x
 library(tibble)
 
 tb <- tibble(x = 1:5, y = 5:1)
+tb
 typeof(tb)
 attributes(tb)
-tb

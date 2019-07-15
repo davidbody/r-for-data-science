@@ -50,7 +50,7 @@ Which carrier had the worst average arrival delay?
 
 ```
 
-## Compute and compare variables [HARD]
+## Compute and compare variables
 
 Compare `dep_time`, `sched_dep_time`, and `dep_delay`. Are they consistent? Explain your findings. [HARD]
 

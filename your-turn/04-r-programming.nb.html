@@ -1775,10 +1775,6 @@ $(document).ready(function () {
 <p>Experiment with the following vector:</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueCA8LSBjKC1JbmYsIC0xLCAwLCAxLCBJbmYsIE5BKVxuXG5gYGAifQ== -->
-<pre class="r"><code>x &lt;- c(-Inf, -1, 0, 1, Inf, NA)
-</code></pre>
-<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>What happens when you subset with a positive integer that’s bigger than the length of the vector? What happens when you subset with a name that doesn’t exist?</p>
@@ -1789,12 +1785,12 @@ $(document).ready(function () {
 </div>
 <div id="functions" class="section level2">
 <h2>Functions</h2>
-<p>Write a function that takes a vector argument and returns the elements at even numbered positions. Test your function.</p>
+<p>Write a function that takes a numeric vector and returns only even numbers (and no missing values). Test your function.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>Write a function that takes a numeric vector and returns only even numbers (and no missing values). Test your function.</p>
+<p>Write a function that takes a vector argument and returns the elements at even numbered positions. Test your function.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-chunk-end -->
@@ -1816,6 +1812,7 @@ $(document).ready(function () {
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>[Harder] Use a map function to compute the number of unique values in each column of the <code>iris</code> dataset.</p>
+<p>Hint: Calling the <code>unique</code> function on a vector returns a vector with duplicate elements removed.</p>
 <p>Hint: you can pass a formula starting with ~ to the purrr map functions. Read the documentation for <code>purrr::map</code>.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
@@ -1825,7 +1822,7 @@ $(document).ready(function () {
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiRXhlcmNpc2UgNCIKb3V0cHV0OiBodG1sX25vdGVib29rCmVkaXRvcl9vcHRpb25zOiAKICBjaHVua19vdXRwdXRfdHlwZTogaW5saW5lCi0tLQoKIyBSIHByb2dyYW1taW5nCgojIyBWZWN0b3JzIGFuZCBsaXN0cwoKV2hhdCBkb2VzIGBtZWFuKGlzLm5hKHgpKWAgdGVsbCB5b3UgYWJvdXQgYSB2ZWN0b3IgYHhgPyBXaGF0IGFib3V0IGBzdW0oIWlzLmZpbml0ZSh4KSlgPwoKRXhwZXJpbWVudCB3aXRoIHRoZSBmb2xsb3dpbmcgdmVjdG9yOgoKYGBge3J9CnggPC0gYygtSW5mLCAtMSwgMCwgMSwgSW5mLCBOQSkKCmBgYAoKV2hhdCBoYXBwZW5zIHdoZW4geW91IHN1YnNldCB3aXRoIGEgcG9zaXRpdmUgaW50ZWdlciB0aGF0J3MgYmlnZ2VyIHRoYW4gdGhlIGxlbmd0aCBvZiB0aGUgdmVjdG9yPyBXaGF0IGhhcHBlbnMgd2hlbiB5b3Ugc3Vic2V0IHdpdGggYSBuYW1lIHRoYXQgZG9lc24ndCBleGlzdD8KCmBgYHtyfQoKYGBgCgoKIyMgRnVuY3Rpb25zCgpXcml0ZSBhIGZ1bmN0aW9uIHRoYXQgdGFrZXMgYSB2ZWN0b3IgYXJndW1lbnQgYW5kIHJldHVybnMgdGhlIGVsZW1lbnRzIGF0IGV2ZW4gbnVtYmVyZWQgcG9zaXRpb25zLiBUZXN0IHlvdXIgZnVuY3Rpb24uCgpgYGB7cn0KCmBgYAoKV3JpdGUgYSBmdW5jdGlvbiB0aGF0IHRha2VzIGEgbnVtZXJpYyB2ZWN0b3IgYW5kIHJldHVybnMgb25seSBldmVuIG51bWJlcnMgKGFuZCBubyBtaXNzaW5nIHZhbHVlcykuIFRlc3QgeW91ciBmdW5jdGlvbi4KCmBgYHtyfQoKYGBgCgojIyBJdGVyYXRpb24gd2l0aCBwdXJyciBtYXAgZnVuY3Rpb25zCgpGb3IgdGhpcyBwYXJ0LCBsb2FkIHRoZSB0aWR5dmVyc2UgcGFja2FnZS4KCmBgYHtyfQpsaWJyYXJ5KHRpZHl2ZXJzZSkKYGBgCgpVc2UgYSBtYXAgZnVuY3Rpb24gdG8gY29tcHV0ZSB0aGUgbWVhbiBvZiBldmVyeSBjb2x1bW4gb2YgYG10Y2Fyc2AuCgpgYGB7cn0KCmBgYAoKW0hhcmRlcl0gVXNlIGEgbWFwIGZ1bmN0aW9uIHRvIGNvbXB1dGUgdGhlIG51bWJlciBvZiB1bmlxdWUgdmFsdWVzIGluIGVhY2ggY29sdW1uIG9mIHRoZSBgaXJpc2AgZGF0YXNldC4KCkhpbnQ6IHlvdSBjYW4gcGFzcyBhIGZvcm11bGEgc3RhcnRpbmcgd2l0aCB+IHRvIHRoZSBwdXJyciBtYXAgZnVuY3Rpb25zLiBSZWFkIHRoZSBkb2N1bWVudGF0aW9uIGZvciBgcHVycnI6Om1hcGAuCgpgYGB7cn0KCmBgYAoK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiRXhlcmNpc2UgNCIKb3V0cHV0OiBodG1sX25vdGVib29rCmVkaXRvcl9vcHRpb25zOiAKICBjaHVua19vdXRwdXRfdHlwZTogaW5saW5lCi0tLQoKIyBSIHByb2dyYW1taW5nCgojIyBWZWN0b3JzIGFuZCBsaXN0cwoKV2hhdCBkb2VzIGBtZWFuKGlzLm5hKHgpKWAgdGVsbCB5b3UgYWJvdXQgYSB2ZWN0b3IgYHhgPyBXaGF0IGFib3V0IGBzdW0oIWlzLmZpbml0ZSh4KSlgPwoKRXhwZXJpbWVudCB3aXRoIHRoZSBmb2xsb3dpbmcgdmVjdG9yOgoKYGBge3J9CnggPC0gYygtSW5mLCAtMSwgMCwgMSwgSW5mLCBOQSkKCmBgYAoKV2hhdCBoYXBwZW5zIHdoZW4geW91IHN1YnNldCB3aXRoIGEgcG9zaXRpdmUgaW50ZWdlciB0aGF0J3MgYmlnZ2VyIHRoYW4gdGhlIGxlbmd0aCBvZiB0aGUgdmVjdG9yPyBXaGF0IGhhcHBlbnMgd2hlbiB5b3Ugc3Vic2V0IHdpdGggYSBuYW1lIHRoYXQgZG9lc24ndCBleGlzdD8KCmBgYHtyfQoKYGBgCgoKIyMgRnVuY3Rpb25zCgpXcml0ZSBhIGZ1bmN0aW9uIHRoYXQgdGFrZXMgYSBudW1lcmljIHZlY3RvciBhbmQgcmV0dXJucyBvbmx5IGV2ZW4gbnVtYmVycyAoYW5kIG5vIG1pc3NpbmcgdmFsdWVzKS4gVGVzdCB5b3VyIGZ1bmN0aW9uLgoKYGBge3J9CgpgYGAKCldyaXRlIGEgZnVuY3Rpb24gdGhhdCB0YWtlcyBhIHZlY3RvciBhcmd1bWVudCBhbmQgcmV0dXJucyB0aGUgZWxlbWVudHMgYXQgZXZlbiBudW1iZXJlZCBwb3NpdGlvbnMuIFRlc3QgeW91ciBmdW5jdGlvbi4KCmBgYHtyfQoKYGBgCgoKIyMgSXRlcmF0aW9uIHdpdGggcHVycnIgbWFwIGZ1bmN0aW9ucwoKRm9yIHRoaXMgcGFydCwgbG9hZCB0aGUgdGlkeXZlcnNlIHBhY2thZ2UuCgpgYGB7cn0KbGlicmFyeSh0aWR5dmVyc2UpCmBgYAoKVXNlIGEgbWFwIGZ1bmN0aW9uIHRvIGNvbXB1dGUgdGhlIG1lYW4gb2YgZXZlcnkgY29sdW1uIG9mIGBtdGNhcnNgLgoKYGBge3J9CgpgYGAKCltIYXJkZXJdIFVzZSBhIG1hcCBmdW5jdGlvbiB0byBjb21wdXRlIHRoZSBudW1iZXIgb2YgdW5pcXVlIHZhbHVlcyBpbiBlYWNoIGNvbHVtbiBvZiB0aGUgYGlyaXNgIGRhdGFzZXQuCgpIaW50OiBDYWxsaW5nIHRoZSBgdW5pcXVlYCBmdW5jdGlvbiBvbiBhIHZlY3RvciByZXR1cm5zIGEgdmVjdG9yIHdpdGggZHVwbGljYXRlIGVsZW1lbnRzIHJlbW92ZWQuCgpIaW50OiB5b3UgY2FuIHBhc3MgYSBmb3JtdWxhIHN0YXJ0aW5nIHdpdGggfiB0byB0aGUgcHVycnIgbWFwIGZ1bmN0aW9ucy4gUmVhZCB0aGUgZG9jdW1lbnRhdGlvbiBmb3IgYHB1cnJyOjptYXBgLgoKYGBge3J9CgpgYGAKCg==</div>
 
 
 

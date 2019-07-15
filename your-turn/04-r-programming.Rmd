@@ -27,17 +27,18 @@ What happens when you subset with a positive integer that's bigger than the leng
 
 ## Functions
 
+Write a function that takes a numeric vector and returns only even numbers (and no missing values). Test your function.
+
+```{r}
+
+```
+
 Write a function that takes a vector argument and returns the elements at even numbered positions. Test your function.
 
 ```{r}
 
 ```
 
-Write a function that takes a numeric vector and returns only even numbers (and no missing values). Test your function.
-
-```{r}
-
-```
 
 ## Iteration with purrr map functions
 
@@ -54,6 +55,8 @@ Use a map function to compute the mean of every column of `mtcars`.
 ```
 
 [Harder] Use a map function to compute the number of unique values in each column of the `iris` dataset.
+
+Hint: Calling the `unique` function on a vector returns a vector with duplicate elements removed.
 
 Hint: you can pass a formula starting with ~ to the purrr map functions. Read the documentation for `purrr::map`.
 
