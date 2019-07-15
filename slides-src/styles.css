@@ -23,7 +23,7 @@
   font-weight: bold;
 }
 
-code {
+code:not(.countdown-time) {
   background-color: #f8f8f8;
   color: #333;
 }
