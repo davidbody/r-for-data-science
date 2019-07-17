@@ -205,7 +205,7 @@ class: left
 <div style="margin-top: -20px">
 <ul>
   <li><code>x %>% f</code> is equivalent to <code>f(x)</code></li>
-  <li><code>x %>% f(y)</code> is equivalent to <code>(fx, y)</code></li>
+  <li><code>x %>% f(y)</code> is equivalent to <code>f(x, y)</code></li>
   <li><code>x %>% f %>% g %>% h</code> is equivalent to <code>h(g(f(x)))</code></li>
 </ul>
 </div>
