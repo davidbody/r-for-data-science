@@ -23,7 +23,7 @@ diamonds %>%
 
 diamonds %>%
   ggplot() +
-  geom_histogram(aes(x = carat), binwidth = 0.5)
+  geom_histogram(aes(x = carat), binwidth = 0.5, boundary = 0)
 
 diamonds %>%
   count(cut_width(carat, 0.5))
@@ -61,11 +61,3 @@ gridExtra::grid.arrange(df, cdf, ncol = 1)
 diamonds %>%
   ggplot(aes(carat)) +
   geom_line(stat = "ecdf")
-
-diamonds %>%
-  ggplot(aes(carat)) +
-  geom_step(stat = "ecdf")
-
-diamonds %>%
-  ggplot(aes(carat)) +
-  stat_ecdf(geom = "step")
