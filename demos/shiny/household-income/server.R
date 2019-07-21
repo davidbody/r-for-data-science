@@ -20,6 +20,7 @@ shinyServer(function(input, output) {
         }
         household_income %>%
             filter(Country %in% c(country_1, country_2)) %>%
+            mutate(Country = fct_relevel(Country, country_1)) %>%
             ggplot(aes(Year, Index, group = Decile, color = Decile)) +
             geom_point() +
             geom_line() +
